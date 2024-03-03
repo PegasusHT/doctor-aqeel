@@ -1,9 +1,15 @@
 {
-    "Index": {
-      "title": "Hello world!",
-      "select": "Select a language",
-      "language-one": "english",
-      "language-two": "french",
-      "locale": "{locale, select, en {English} ara {Arabic}}"
-    }
+  "Headline": {
+    "title": "Dr Aqeel Farooque"
+  },
+
+  "Nav": {
+    "Home": "Home",
+    "About": "About",
+    "Services": "Services",
+    "Reviews": "Reviews",
+    "Blog": "Blog",
+    "FAQs": "FAQs",
+    "Contact": "Contact"
   }
+}
