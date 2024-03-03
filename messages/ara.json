@@ -1,0 +1,9 @@
+{
+    "Index": {
+        "title": "مرحبًا بالعالم!",
+        "select": "اختر لغة",
+        "language-one": "الإنجليزية",
+        "language-two": "العربية",
+        "locale": "{locale, select, en {إنجليزي} ara {عربي} other {غير معروف}}"
+    }
+}

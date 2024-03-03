@@ -1,4 +1,4 @@
-import LinkList from './LinkList';
+import LinkList from './LinksList';
 import { FaLinkedin, FaGithub, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
 
 const Headline = () => {
