@@ -1,0 +1,15 @@
+{
+  "Headline": {
+    "title": "Dr Aqeel Farooque"
+  },
+
+  "Nav": {
+    "Home": "Home",
+    "About": "About",
+    "Services": "Services",
+    "Reviews": "Reviews",
+    "Blog": "Blog",
+    "FAQs": "FAQs",
+    "Contact": "Contact"
+  }
+}

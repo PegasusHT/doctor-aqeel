@@ -1,7 +1,7 @@
-import LinkList from './LinkList';
+import LinkList from './LinksList';
 import { FaLinkedin, FaGithub, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
 
-const Headline = () => {
+const Headline = ({ title }: { title: string }) => {
     const links = [
         'https://www.linkedin.com/in/aqeel-farooque-64158921/',
         'https://www.tiktok.com/@dr.aqeelfarooque?_t=8c0ixA2Z4Yp&_r=1',
@@ -30,7 +30,7 @@ const Headline = () => {
                 </a>
             </div>
             <div className="w-3/5">
-                <h2 className="leading-5 font-semibold text-2xl md:text-4xl">Dr Aqeel Farooque</h2>
+                <h2 className="leading-5 font-semibold text-2xl md:text-4xl">{title}</h2>
                 <h2 className="font-normal mt-4 text-base">MBBS CCT (UK) FRCPCH (UK)</h2>
             </div>
             <LinkList links={socialLinks} />
