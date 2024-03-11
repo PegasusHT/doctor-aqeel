@@ -1,9 +1,10 @@
 'use client';
-import doctify_rating from '../../../../public/doctify_rating.png';
+import doctify_rating from '/public/doctify_rating.png';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { ChangeEvent, useTransition } from 'react';
 import { useLocale } from 'next-intl';
+import Link from 'next/link';
 
 const Nav = ({ sections }: { sections: string[] }) => {
     const [isPending, startTransition] = useTransition();
@@ -23,8 +24,10 @@ const Nav = ({ sections }: { sections: string[] }) => {
                 <ul className="flex gap-4 ml-3 mt-8 font-semibold text-xs md:text-base">
                     {sections.map((section) => (
                         <li key={section}>
-                            <a href={`/${section.toLowerCase()}`}>{section}</a>
-                        </li>
+                           <Link href={`/${localActive}/${section.toLowerCase()}`}>
+                               {section}
+                           </Link>
+                       </li>
                     ))}
                 </ul>
             </nav>

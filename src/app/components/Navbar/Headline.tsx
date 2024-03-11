@@ -19,18 +19,18 @@ const Headline = ({ title }: { title: string }) => {
     ];
 
     return (
-        <div className="flex w-full h-1/6 text-center items-center">
+        <div className="flex pd-0 text-center items-center">
             <div className="w-1/3 ml-[-3vw] md:mr-[-4vw]">
                 <a href="https://dr-aqeel.com/">
                     <img
                         src="https://dr-aqeel.com/wp-content/uploads/2024/01/Dr.aqeel-farooque-logo-png-01-1024x1024.png"
-                        className=""
+                        className="mt-[-50px] mb-[-60px]"
                         alt=""
                     />
                 </a>
             </div>
             <div className="w-3/5">
-                <h2 className="leading-5 font-semibold text-2xl md:text-4xl">{title}</h2>
+                <h2 className="leading-5 font-semibold text-2xl md:text-4xl mt-5">{title}</h2>
                 <h2 className="font-normal mt-4 text-base">MBBS CCT (UK) FRCPCH (UK)</h2>
             </div>
             <LinkList links={socialLinks} />

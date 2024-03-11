@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "../globals.css";
+import "./global.css";
 import Headline from "../components/Navbar/Headline";
 import Nav from "../components/Navbar/Nav";
 import {useTranslations} from 'next-intl';
@@ -37,11 +37,11 @@ export default function RootLayout({
     <html lang={locale}>
       <body className={inter.className}>
         <NextIntlClientProvider locale={locale} messages={messages}>
+          <Headline title={tHeadline('title')} />
+          <Nav sections={sections} />
           <main className="h-screen">
-              <Headline title={tHeadline('title')} />
-              <Nav sections={sections} />
-              {children}
-            </main>
+            {children}
+          </main>
         </NextIntlClientProvider> 
       </body>
     </html>
