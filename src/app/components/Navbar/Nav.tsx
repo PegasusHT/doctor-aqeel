@@ -20,7 +20,7 @@ const Nav = ({ sections }: { sections: string[] }) => {
     }
 
     return (
-        <div className='gap-4 sm:flex sm:justify-end'>
+        <div className='gap-4 sm:flex sm:justify-end mt-4'>
             <nav>
                 <ul className="flex gap-4 ml-4 md:ml-6 xl:ml-8 mt-8 font-semibold text-xs md:text-base">
                     {sections.map((section) => {

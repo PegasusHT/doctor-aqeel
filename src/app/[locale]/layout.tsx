@@ -5,6 +5,7 @@ import Headline from "../components/Navbar/Headline";
 import Nav from "../components/Navbar/Nav";
 import {useTranslations} from 'next-intl';
 import {NextIntlClientProvider, useMessages} from 'next-intl';
+import Footer from "../components/Footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -49,6 +50,7 @@ export default function RootLayout({
           <main className="h-screen">
             {children}
           </main>
+          <Footer />
         </NextIntlClientProvider> 
       </body>
     </html>
