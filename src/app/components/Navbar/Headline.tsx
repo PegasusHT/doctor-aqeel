@@ -29,11 +29,13 @@ const Headline = ({ title }: { title: string }) => {
                     />
                 </a>
             </div>
-            <div className="w-3/5">
+            <div className="w-3/5 ml-20">
                 <h2 className="leading-5 font-semibold text-2xl md:text-4xl mt-5">{title}</h2>
                 <h2 className="font-normal mt-4 text-base">MBBS CCT (UK) FRCPCH (UK)</h2>
             </div>
-            <LinkList links={socialLinks} />
+            <div className='pl-10 mr-auto'>
+                <LinkList links={socialLinks} />
+            </div>
         </div>
     );
 };

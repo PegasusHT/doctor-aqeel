@@ -1,9 +1,11 @@
+import React from 'react';
+import Home from '../[locale]/Home/Home';
 
+const PageContent: React.FC = () => {
 
-export default function Home() {
-  return (
-    <main className="">
+    return (
+        <Home />
+    );
+};
 
-    </main>
-  );
-}
+export default PageContent;

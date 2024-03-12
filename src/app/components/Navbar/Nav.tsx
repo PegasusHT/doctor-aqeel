@@ -1,7 +1,7 @@
 'use client';
 import doctify_rating from '/public/doctify_rating.png';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { ChangeEvent, useTransition } from 'react';
 import { useLocale } from 'next-intl';
 import Link from 'next/link';
@@ -10,7 +10,8 @@ const Nav = ({ sections }: { sections: string[] }) => {
     const [isPending, startTransition] = useTransition();
     const router = useRouter();
     const localActive = useLocale();
-
+    const pathname = usePathname();
+    
     const handleLanguageChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         const selectedLanguage = event.target.value;
         startTransition(() => {
@@ -22,13 +23,28 @@ const Nav = ({ sections }: { sections: string[] }) => {
         <div className='gap-4 md:flex justify-end'>
             <nav>
                 <ul className="flex gap-4 ml-3 mt-8 font-semibold text-xs md:text-base">
-                    {sections.map((section) => (
-                        <li key={section}>
-                           <Link href={`/${localActive}/${section.toLowerCase()}`}>
-                               {section}
-                           </Link>
-                       </li>
-                    ))}
+                    {sections.map((section) => {
+                        let expectedPathname;
+                        let linkHref;
+
+                        if (section === 'Home') {
+                            expectedPathname = `/${localActive}`;
+                            linkHref = `/${localActive}`;
+                        } else {
+                            expectedPathname = `/${localActive}/${section.toLowerCase()}`;
+                            linkHref = `/${localActive}/${section.toLowerCase()}`;
+                        }
+
+                        const isActive = pathname === expectedPathname;
+
+                        return (
+                            <li key={section}>
+                                <Link href={linkHref}>
+                                    <span className={isActive ? 'text-red-500' : ''}>{section}</span>
+                                </Link>
+                            </li>
+                        );
+                    })}
                 </ul>
             </nav>
             <div className='ml-48 md:ml-auto'>
