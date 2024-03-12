@@ -38,8 +38,14 @@ export default function RootLayout({
     <html lang={locale}>
       <body className={inter.className}>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <Headline title={tHeadline('title')} />
-          <Nav sections={sections} />
+          <div className="grid grid-rows-2 lg:w-4/5 mx-auto">
+            <div className="flex justify-center ">
+              <Headline title={tHeadline('title')} />
+            </div>
+            <div className="w-full">
+              <Nav sections={sections} />
+            </div>
+          </div>  
           <main className="h-screen">
             {children}
           </main>
