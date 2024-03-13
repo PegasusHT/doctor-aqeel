@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
                     </form>
                 </div>
             </div>
-            <div>
+            <div className=''>
                 <Marker />
             </div>
         </div>
