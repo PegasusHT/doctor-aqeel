@@ -18,7 +18,7 @@ const Headline = ({ title }: { title: string }) => {
                 <h2 className="font-normal mt-4 text-base">MBBS CCT (UK) FRCPCH (UK)</h2>
             </div>
             <div className='pl-10 mr-auto'>
-                <LinkList />
+                <LinkList position='head'/>
             </div>
         </div>
     );

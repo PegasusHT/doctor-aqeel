@@ -19,18 +19,18 @@ const socialLinks = [
 ];
 
 
-const LinkList: React.FC= ( ) => (
-        <ul className="hidden md:flex ">
-            {socialLinks.map((link, index) => (
-                <li key={index} className="pr-5">
-                    <a href={link.url}>
-                        <span className="text-xl text-red-500">     
-                            {link.icon}
-                        </span>
-                    </a>
-                </li>
-            ))}
-        </ul>
-    );
+const LinkList: React.FC<{ position: string }> = ({ position }) => (
+    <ul className={`flex ${position === 'head' ? 'hidden md:flex' : ''}`}>
+        {socialLinks.map((link, index) => (
+            <li key={index} className="pr-5">
+                <a href={link.url}>
+                    <span className={` text-red-500 ${position === 'head' ? 'text-xl' : 'text-lg'}`}>
+                        {link.icon}
+                    </span>
+                </a>
+            </li>
+        ))}
+    </ul>
+);
 
 export default LinkList;

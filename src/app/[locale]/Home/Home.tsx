@@ -5,11 +5,18 @@ const Home: React.FC = () => {
     const translations = useTranslations('Home');
 
     return (
-        <div>
-            <iframe src='https://www.youtube.com/embed/a7DS9e613oo?controls=0&rel=0&playsinline=1&enablejsapi=1&origin=https%3A%2F%2Fdr-aqeel.com&widgetid=1'/>
-
+        <div >
+           <div className="relative flex justify-center h-screen  overflow-hidden">
+                <video autoPlay loop muted className="absolute w-screen h-3/5">
+                    <source src={'home.mp4'} type="video/mp4"/>
+                    Your browser does not support the video tag.
+                </video>
+                <div className="relative z-30 p-5 h-20 text-2xl text-white bg-purple-300 rounded-xl">
+                    Welcome to my site!
+                </div>
+            </div>
         </div>
     );
 };
 
-export default Home;
+export default Home; 
