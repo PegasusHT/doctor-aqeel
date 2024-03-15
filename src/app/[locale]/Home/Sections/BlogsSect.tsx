@@ -25,7 +25,7 @@ const BlogData = [
 const BlogSection: React.FC = () => {
     return (
         <div className="flex flex-col items-center bg-gray-100">
-            <h2 className="text-2xl font-bold mb-4">Recent Blogs</h2>
+            <h2 className="text-2xl font-bold mb-4 mt-10">Recent Blogs</h2>
 
             {BlogData.map((blog, index) => (
                 <BlogContainer
