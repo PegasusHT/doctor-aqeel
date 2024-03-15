@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { useInView } from 'react-intersection-observer';
 import BlogContainer from './components/blogContainer';
+import { motion } from 'framer-motion';
 
 const BlogData = [
     {
@@ -23,24 +25,45 @@ const BlogData = [
 ];
 
 const BlogSection: React.FC = () => {
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+        threshold: 0.2,
+        delay: 0.5,
+    });
+
     return (
-        <div className="flex flex-col items-center bg-gray-100">
+        <div className="flex flex-col items-center bg-gray-100" ref={ref}>
             <h2 className="text-2xl font-bold mb-4 mt-10">Recent Blogs</h2>
 
-            {BlogData.map((blog, index) => (
-                <BlogContainer
-                    key={index}
-                    imageSrc={blog.imageUrl}
-                    title={blog.title}
-                    date={blog.date}
-                    content={blog.description}
-                />
-            ))}
-     
-            <button className='relative z-30 mt-8 mb-10 h-8 w-36 rounded-full text-white font-semibold '
-                style={{ backgroundColor: '#961b1e'}}>
-                More Blogs
-            </button>
+            <motion.div
+                initial={{ x: '-100vw' }}
+                animate={{ x: inView ? 0 : '-100vw' }}
+                transition={{ duration: 1, type: 'tween' }}
+            >
+                {BlogData.map((blog, index) => (
+                    <BlogContainer
+                        key={index}
+                        imageSrc={blog.imageUrl}
+                        title={blog.title}
+                        date={blog.date}
+                        content={blog.description}
+                    />
+                ))}
+            </motion.div>
+
+            <motion.div
+                initial={{ x: '-100vw' }}
+                animate={{ x: inView ? 0 : '-100vw' }}
+                transition={{ duration: 1, type: 'tween' }}
+                ref={ref}
+            >
+                <button
+                    className="relative z-30 mt-8 mb-10 h-8 w-36 rounded-full text-white font-semibold"
+                    style={{ backgroundColor: '#961b1e' }}
+                >
+                    More Blogs
+                </button>
+            </motion.div>
         </div>
     );
 };

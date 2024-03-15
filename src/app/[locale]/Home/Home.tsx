@@ -25,7 +25,7 @@ const Home: React.FC = () => {
                 <motion.div 
                 initial={{ x: '-100vw' }}
                 animate={{ x: 0 }}
-                transition={{ type: 'tween', stiffness: 80 }}
+                transition={{ type: 'tween', duration: 1}}
                 >
                     <h1 className='text-4xl mt-32 font-bold'>
                         <div className='flex flex-row'>
@@ -41,7 +41,7 @@ const Home: React.FC = () => {
                 <motion.div 
                     initial={{ y: '15vh' }}
                     animate={{ y: 0 }}
-                transition={{ type: 'tween', stiffness: 120 }}
+                transition={{ type: 'tween' }}
                 >
                     <button className='relative z-30 mt-10 h-10 w-44 rounded-full text-white font-semibold'
                         style={{ backgroundColor: '#961b1e'}}>
