@@ -1,6 +1,9 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import Hero from './Sections/Hero';
+import ServicesSect from './Sections/ServicesSect';
+import Method from './Sections/Method';
+import BlogSection from './Sections/BlogsSect';
 
 const Home: React.FC = () => {
     const translations = useTranslations('Home');
@@ -30,6 +33,9 @@ const Home: React.FC = () => {
                 </div>
             </div>
             <Hero />
+            <ServicesSect />
+            <Method />
+            <BlogSection />
         </div>
     );
 };

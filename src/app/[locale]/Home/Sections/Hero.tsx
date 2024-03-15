@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
             </div>
             <div className="flex flex-col items-center justify-center mt-4">
                 <h1 className="text-2xl font-bold">Services</h1>   
-                <p className='p-4 mx-10 text-base'>His clinical expertise lies in pediatric diabetes & endocrinology, and he provides consultations for a wide range of endocrine-related health problems in children, including type 1, 2, and rare types of diabetes, as well as issues related to growth, puberty, thyroid, adrenal, pituitary, sex development, calcium, and metabolic bone disorders. He also works with children who have genetic abnormalities that may cause endocrine problems. </p> 
+                <p className='p-4 mx-10 text-sm mb-8'>His clinical expertise lies in pediatric diabetes & endocrinology, and he provides consultations for a wide range of endocrine-related health problems in children, including type 1, 2, and rare types of diabetes, as well as issues related to growth, puberty, thyroid, adrenal, pituitary, sex development, calcium, and metabolic bone disorders. He also works with children who have genetic abnormalities that may cause endocrine problems. </p> 
             </div>
         </div>
     );
