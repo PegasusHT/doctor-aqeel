@@ -47,7 +47,7 @@ export default function RootLayout({
               <Nav sections={sections} />
             </div>
           </div>  
-          <main className="h-screen">
+          <main className="">
             {children}
           </main>
           <Footer />

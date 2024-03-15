@@ -47,7 +47,7 @@ const Nav = ({ sections }: { sections: string[] }) => {
                     })}
                 </ul>
             </nav>
-            <div className='ml-48 sm:ml-auto sm:mt-4 md:mt-2 lg:mt-0'>
+            <div className='ml-[228px] sm:ml-auto mt-4 sm:mt-4 md:mt-2 lg:mt-0'>
                 <a
                     href='https://www.doctify.com/en-ae/specialist/aqeel-farooque'
                     target='_blank'
