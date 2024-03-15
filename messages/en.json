@@ -11,5 +11,17 @@
     "Blog": "Blog",
     "FAQs": "FAQs",
     "Contact": "Contact"
+  },
+
+  "About": {
+    "title": "About",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "getStarted": "Get Started"
+  },
+  
+  "Home": {
+    "title": "Home",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "getStarted": "Get Started"
   }
 }
