@@ -28,12 +28,11 @@ export default function RootLayout({
   params: { locale: string };
 }>) {
 
-
   const tNav = useTranslations('Nav');
   const tHeadline = useTranslations('Headline');
   const messages = useMessages();
 
-  const sections = [tNav('Home'), tNav('About'), tNav('Services'), tNav('Reviews'), tNav('Blog'), tNav('FAQs'), tNav('Contact')];
+  const sections = [tNav('Home'), tNav('About'), tNav('Services'), tNav('Blog'), tNav('FAQs'), tNav('Contact')];
 
   return (
     <html lang={locale}>
