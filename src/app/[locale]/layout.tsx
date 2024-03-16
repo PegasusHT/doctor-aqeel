@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./global.css";
-import Headline from "../components/Navbar/Headline";
-import Nav from "../components/Navbar/Nav";
 import {useTranslations} from 'next-intl';
 import {NextIntlClientProvider, useMessages} from 'next-intl';
 import Footer from "../components/Footer/Footer";
+import Header from "../components/Navbar/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,20 +31,14 @@ export default function RootLayout({
   const tHeadline = useTranslations('Headline');
   const messages = useMessages();
 
+  const title = tHeadline('title');
   const sections = [tNav('Home'), tNav('About'), tNav('Services'), tNav('Blog'), tNav('FAQs'), tNav('Contact')];
 
   return (
     <html lang={locale}>
       <body className={inter.className}>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <div className="grid grid-rows-2 lg:w-4/5 mx-auto">
-            <div className="flex justify-center ">
-              <Headline title={tHeadline('title')} />
-            </div>
-            <div className="w-full">
-              <Nav sections={sections} />
-            </div>
-          </div>  
+          <Header title={title} sections={sections} />
           <main className="">
             {children}
           </main>
