@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 interface ImageContainerProps {
     imageUrl: string;
@@ -21,7 +22,7 @@ const ImageContainer: React.FC<ImageContainerProps> = ({
             animate={{ x: 0 }}
             transition={{ duration: 1, type: 'tween'}}
         > 
-            <img src={imageUrl} alt={altText} className='w-28'/>
+            <img src={imageUrl} alt={altText} className='w-28' />
             <h1 className="text-lg font-bold">{title}</h1>
             <p>{description}</p>
         </motion.div>
