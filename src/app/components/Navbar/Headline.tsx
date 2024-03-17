@@ -1,4 +1,5 @@
 import LinkList from './LinksList';
+import Image from 'next/image';
 
 const Headline = ({ title }: { title: string }) => {
 
@@ -9,7 +10,7 @@ const Headline = ({ title }: { title: string }) => {
                     <img
                         src="https://dr-aqeel.com/wp-content/uploads/2024/01/Dr.aqeel-farooque-logo-png-01-1024x1024.png"
                         className="mt-[-50px] mb-[-60px] h-52"
-                        alt=""
+                        alt="" 
                     />
                 </a>
             </div>

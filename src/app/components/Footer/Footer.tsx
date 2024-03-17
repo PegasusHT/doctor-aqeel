@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
             <div className="flex flex-col md:grid md:grid-cols-[auto_auto_auto] h-[21rem] md:h-56
             items-center md:items-start md:ml-20">
                 <div className="flex flex-col items-center">
-                    <div className="text-red-500 pb-4 text-2xl font-bold">Contact Me</div>
+                    <div className="pb-4 text-2xl font-bold" style={{color:'#961B1E'}}>Contact Me</div>
                     <div className="text-lg pb-1">info@dr- aqeel.com</div>
                     <div className="text-lg pb-3">Dubai @ Sharjah</div>
                     <div className="">
@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
                     <p>Contact</p>
                 </div>
                 <div className="mt-12 md:mr-10 md:mt-0">
-                    <h1 className='text-red-500 text-xl ml-1 md:ml-0 font-semibold'>Subscribe to Get My Newsletter</h1>
+                    <h1 className='text-xl ml-1 md:ml-0 font-semibold' style={{color:'#961B1E'}}>Subscribe to Get My Newsletter</h1>
                     <form className='grid col-2'>
                         <input
                             type="email"

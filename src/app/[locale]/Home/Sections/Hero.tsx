@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import Image from 'next/image';
 
 const Hero: React.FC = () => {
     const [ref, inView] = useInView({
@@ -16,7 +17,7 @@ const Hero: React.FC = () => {
                 animate={{ x: inView ? 0 : '-100vw' }}
                 transition={{ type: 'tween', duration: 1.2 }}
             >
-                <img
+                <img 
                     src="https://dr-aqeel.com/wp-content/uploads/2024/01/dr_aqeel-1.png"
                     alt="Portrait"
                     className="w-full h-full"
@@ -43,7 +44,7 @@ const Hero: React.FC = () => {
                     </div>
                     <div className="">
                         <p className="mr-10" style={{ color: '#2c2c74' }}>
-                            Expert in children's diabetes and endocrine diseases
+                            Expert in children&apos;s diabetes and endocrine diseases
                         </p>
                     </div>
                     <div className="text-sm gap-x-2 mr-10 mt-2 tracking-wide">
@@ -51,7 +52,7 @@ const Hero: React.FC = () => {
                             Dr Aqeel Farooque is a highly qualified and experienced Pediatric Endocrinologist who is passionate about helping children with endocrine-related health issues.
                         </p>
                         <p>
-                            He currently serves as the head of the Diabetes & Endocrinology Unit at Al Qassimi Women’s & Children’s Hospital, Sharjah. This is a tertiary referral center providing care for children of the Northern Emirates, with complex endocrine-related health issues.
+                            He currently serves as the head of the Diabetes & Endocrinology Unit at Al Qassimi Women&apos;s & Children&apos;s Hospital, Sharjah. This is a tertiary referral center providing care for children of the Northern Emirates, with complex endocrine-related health issues.
                         </p>
                     </div>
                     <div className="mb-8 mt-3">
