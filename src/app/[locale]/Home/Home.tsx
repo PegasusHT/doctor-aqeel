@@ -7,12 +7,15 @@ import Method from './Sections/Method';
 import BlogSection from './Sections/BlogsSect';
 import {motion} from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { useLocale } from 'next-intl';
+import Link from 'next/link';
 
 const Home: React.FC = () => {
     const translations = useTranslations('Home');
     const [ref, inView] = useInView({
         triggerOnce: true, 
       });
+    const localActive = useLocale();
 
     return (
         <div ref={ref}>
@@ -43,10 +46,12 @@ const Home: React.FC = () => {
                     animate={{ y: 0 }}
                 transition={{ type: 'tween' }}
                 >
-                    <button className='relative z-30 mt-10 h-10 w-44 rounded-full text-white font-semibold'
+                    <Link href={`/${localActive}/services`}>
+                        <button className='relative z-30 mt-10 h-10 w-44 rounded-full text-white font-semibold'
                         style={{ backgroundColor: '#961b1e'}}>
                             See Services
-                    </button>
+                        </button>
+                    </Link>
                 </motion.div>
                 </div>
             </div>
