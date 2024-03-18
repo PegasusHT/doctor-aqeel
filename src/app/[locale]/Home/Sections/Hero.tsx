@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Hero: React.FC = () => {
     const [ref, inView] = useInView({
@@ -56,12 +57,14 @@ const Hero: React.FC = () => {
                         </p>
                     </div>
                     <div className="mb-8 mt-3">
-                        <button
-                            className='relative z-30 h-9 w-28 rounded-full text-white text-sm font-semibold'
-                            style={{ backgroundColor: '#961b1e' }}
-                        >
-                            Read More
-                        </button>
+                        <Link href="/en/about">
+                            <button
+                                className='relative z-30 h-9 w-28 rounded-full text-white text-sm font-semibold'
+                                style={{ backgroundColor: '#961b1e' }}
+                            >
+                                Read More
+                            </button>
+                        </Link>
                     </div>
                 </motion.div>
             </div>

@@ -1,7 +1,6 @@
 import React from 'react';
 import Headline from './Headline';
 import Nav from './Nav';
-import { useTranslations } from 'next-intl';
 
 interface HeaderProps {
     title: string;
@@ -9,8 +8,6 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ title, sections }) => {
-    const tNav = useTranslations('Nav');
-    const tHeadline = useTranslations('Headline');
 
     return (
         <div className="grid grid-rows-2 lg:w-4/5 mx-auto">
@@ -18,7 +15,7 @@ const Header: React.FC<HeaderProps> = ({ title, sections }) => {
                 <Headline title={title} />
             </div>
             <div className="w-full">
-                <Nav sections={sections.map(section => tNav(section))} />
+                <Nav sections={sections} />
             </div>
         </div>
     );
