@@ -1,5 +1,5 @@
 import React from 'react';
-import data from './components/data.json';
+import data from '../../../data/aboutPageData.json';
 import ImageContainer from './components/imgContainer';
 import Image from 'next/image';
 
