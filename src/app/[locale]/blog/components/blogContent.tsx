@@ -30,7 +30,14 @@ const BlogContent: React.FC<BlogContainerProps> = ({ title, date, author, fullDe
             <h3 className=" mb-2 text-3xl text-black font-semibold">{title}</h3>
             <div className='flex flex-row gap-1 text-sm' style={{color:'#046bd2'}}>
                 <p className=''>
-                    By {author}   
+                    By {author}  
+                </p>
+                <p> / </p>
+                <p className="">{date}</p>
+            </div>
+            <div className='w-full flex justify-center mt-5 mb-5'>
+                <Image
+                    src={imageUrl}
                     alt="Blog Image"
                     width={400} height={300}
                 />
