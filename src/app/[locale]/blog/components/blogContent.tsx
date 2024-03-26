@@ -26,18 +26,11 @@ const BlogContent: React.FC<BlogContainerProps> = ({ title, date, author, fullDe
     ];
 
     return (
-        <div className="bg-gray-100 mb-10 py-4 mx-2 px-3">
+        <div className="bg-gray-100 mb-4 py-4 mx-2 px-3">
             <h3 className=" mb-2 text-3xl text-black font-semibold">{title}</h3>
             <div className='flex flex-row gap-1 text-sm' style={{color:'#046bd2'}}>
                 <p className=''>
-                    By {author}  
-                </p>
-                <p> / </p>
-                <p className="">{date}</p>
-            </div>
-            <div className='w-full flex justify-center mt-5 mb-5'>
-                <Image
-                    src={imageUrl}
+                    By {author}   
                     alt="Blog Image"
                     width={400} height={300}
                 />
@@ -51,11 +44,11 @@ const BlogContent: React.FC<BlogContainerProps> = ({ title, date, author, fullDe
             </div>
 
             <p className='text-lg mt-7 font-semibold'>Share Post</p>
-            <div className='flex flex-row gap-0.5 mb-2'>
+            <div className='flex flex-row gap-0.5 '>
                 {
                     shareUrls.map((url: string, index: number) => (
                         <a key={index} href={url} target='_blank' rel='noreferrer'>
-                            <SocialIcon url={url} style={{ height: 30, width: 30 }} />
+                            <SocialIcon url={url} style={{ height: 35, width: 35 }} />
                         </a>
                     ))
                 }
