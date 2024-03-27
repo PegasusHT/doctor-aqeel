@@ -1,0 +1,32 @@
+[
+    {
+        "question": "How can I schedule an appointment with you?",
+        "answer": "As Dr Aqeel currently works in Al Qassmi Women’s & Children’s Hospital, kindly click on this link for further information on how to book an appointment:",
+        "link": "https://www.ehs.gov.ae/en/services/services-directory/scheduling-a-medical-appointmen"
+    },
+    {
+        "question": "Do I need a referral from my child's primary care physician to see a pediatric endocrinologist?",
+        "answer": "As Dr Aqeel currently works in Al Qassmi Women’s & Children’s Hospital, kindly click on this link for further information on how to book an appointment:",
+        "link": "https://www.ehs.gov.ae/en/services/services-directory/scheduling-a-medical-appointmen"
+    },
+    {
+        "question": "Are you accepting new patients?",
+        "answer": "Yes, we are currently accepting new patients. We strive to provide comprehensive care to all children in need of pediatric endocrinology services in Dubai and the Northern Emirates.",
+        "link": ""
+    },
+    {
+        "question": "Is there a waiting period for appointments?",
+        "answer": "We make every effort to minimize waiting times for our patients. While we strive to accommodate urgent cases promptly, certain non-urgent appointments may have a short waiting period. Our scheduling team will work closely with you to find the earliest available appointment that suits your needs.",
+        "link": ""
+    },
+    {
+        "question": "Can I request a telemedicine appointment?",
+        "answer": "Yes, we offer telemedicine appointments for certain conditions and follow-up visits. This option allows you to consult with our pediatric endocrinologist remotely, providing convenience and accessibility while ensuring quality care. Not all conditions may be suitable for telemedicine, so please consult with our team to determine eligibility.",
+        "link": ""
+    },
+    {
+        "question": "What languages are spoken at your clinic?",
+        "answer": "At our clinic, we prioritize effective communication. Our staff is proficient in English, Arabic and Urdu. However, we will try to ensure that language is not a barrier to understanding and providing excellent care for our patients and their families.",
+        "link": ""
+    }
+]
