@@ -20,9 +20,9 @@ const socialLinks = [
 
 
 const LinkList: React.FC<{ position: string }> = ({ position }) => (
-    <ul className={`flex ${position === 'head' ? 'hidden md:flex' : ''}`}>
+    <ul className={`flex gap-3 ${position === 'head' ? 'hidden md:flex' : ''}`}>
         {socialLinks.map((link, index) => (
-            <li key={index} className="pr-5">
+            <li key={index} className="">
                 <a href={link.url}>
                     <span className={` text-red-500 ${position === 'head' ? 'text-xl' : 'text-lg'}`}>
                         {link.icon}
