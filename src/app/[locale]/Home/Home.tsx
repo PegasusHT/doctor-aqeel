@@ -30,8 +30,8 @@ const Home: React.FC = () => {
                 animate={{ x: 0 }}
                 transition={{ type: 'tween', duration: 1}}
                 >
-                    <h1 className='text-4xl mt-32 font-bold'>
-                        <div className='flex flex-row'>
+                    <h1 className='text-3xl mt-28 font-bold'>
+                        <div className='flex flex-row items-center justify-center'>
                             <p className='' style={{ color: '#961b1e' }}>Holistic care </p> 
                             <p className='pl-3'>for you </p>
                         </div>

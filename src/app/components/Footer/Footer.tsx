@@ -1,8 +1,10 @@
 import React from 'react';
 import Marker from './Marker';
 import LinkList from '../Navbar/LinksList';
+import SectionLink from './sectionLink';
 
 const Footer: React.FC = () => {
+
     return (
         <div className="bg-violet-100 pt-8 md:pt-20">
             <div className="flex flex-col md:grid md:grid-cols-[auto_auto_auto] h-[21rem] md:h-56
@@ -16,10 +18,7 @@ const Footer: React.FC = () => {
                     </div>
                 </div>
                 <div className="hidden md:grid grid-rows-4 gap-y-1 pr-4">
-                    <p>About</p>
-                    <p>Services</p>
-                    <p>FAQs</p>
-                    <p>Contact</p>
+                    <SectionLink sections={['About', 'Services', 'FAQs', 'Contact']} />
                 </div>
                 <div className="mt-12 md:mr-10 md:mt-0">
                     <h1 className='text-xl ml-1 md:ml-0 font-semibold' style={{color:'#961B1E'}}>Subscribe to Get My Newsletter</h1>
