@@ -47,27 +47,30 @@ const Nav = ({ sections }: { sections: string[] }) => {
                     })}
                 </ul>
             </nav>
-            <div className='ml-[228px] sm:ml-auto mt-4 sm:mt-4 md:mt-2 lg:mt-0'>
-                <a
-                    href='https://www.doctify.com/en-ae/specialist/aqeel-farooque'
-                    target='_blank'
-                    className='md:mr-8'
-                >
-                    <Image src={doctify_rating} alt="doctify rating"/>
-                </a>
+            <div className='flex flex-col items-end'>
+                <div className=' mr-7 sm:ml-auto mt-4 sm:mt-4 md:mt-2 lg:mt-0'>
+                    <a
+                        href='https://www.doctify.com/en-ae/specialist/aqeel-farooque'
+                        target='_blank'
+                        className='md:mr-8'
+                    >
+                        <Image src={doctify_rating} alt="doctify rating"/>
+                    </a>
+                </div>
+                <label className='flex md:justify-center mr-3 mb-4 ml-48 md:mt-6 lg:mt-7 md:ml-0'>
+                    <select
+                        name="selectedLanguage"
+                        defaultValue={localActive}
+                        disabled={isPending}
+                        onChange={handleLanguageChange}
+                        className="bg-gray-200 border border-gray-300 mr-4 h-8 ml-auto md:ml-0 text-xs md:text-base mt-2 p-1"
+                    >
+                        <option value="en">English</option>
+                        <option value="ar">Arabic</option>
+                    </select>
+                </label>
             </div>
-            <label className='flex md:justify-center mr-4 mb-4 ml-48 md:mt-6 lg:mt-7 md:ml-0'>
-                <select
-                    name="selectedLanguage"
-                    defaultValue={localActive}
-                    disabled={isPending}
-                    onChange={handleLanguageChange}
-                    className="bg-gray-200 border border-gray-300 mr-4 h-8 ml-auto md:ml-0 text-xs md:text-base mt-2 p-1"
-                >
-                    <option value="en">English</option>
-                    <option value="ar">Arabic</option>
-                </select>
-            </label>
+          
         </div>
     );
 };
