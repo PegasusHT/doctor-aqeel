@@ -3,6 +3,8 @@ import { useInView } from 'react-intersection-observer';
 import BlogContainer from './components/blogContainer';
 import { motion } from 'framer-motion';
 import Blogs  from '../../../../data/blogData.json';
+import Link from 'next/link';   
+import { useLocale } from 'next-intl';
 
 const BlogSection: React.FC = () => {
     const [ref, inView] = useInView({
@@ -10,6 +12,7 @@ const BlogSection: React.FC = () => {
         threshold: 0.2,
         delay: 0.5,
     });
+    const localActive = useLocale();
 
     return (
         <div className="flex flex-col items-center bg-gray-100" ref={ref}>
@@ -37,12 +40,14 @@ const BlogSection: React.FC = () => {
                 transition={{ duration: 1, type: 'tween' }}
                 ref={ref}
             >
-                <button
-                    className="relative z-30 mt-8 mb-10 h-8 w-36 rounded-full text-white font-semibold"
-                    style={{ backgroundColor: '#961b1e' }}
-                >
-                    More Blogs
-                </button>
+                <Link href={`/${localActive}/blog`}>
+                    <button
+                        className="relative z-30 mt-8 mb-10 h-8 w-36 rounded-full text-white font-semibold"
+                        style={{ backgroundColor: '#961b1e' }}
+                    >
+                        More Blogs
+                    </button>
+                </Link>
             </motion.div>
         </div>
     );
