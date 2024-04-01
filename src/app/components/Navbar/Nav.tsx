@@ -20,8 +20,8 @@ const Nav = ({ sections }: { sections: string[] }) => {
     }
 
     return (
-        <div className='gap-4 sm:flex sm:justify-end mt-4'>
-            <nav>
+        <div className='gap-4 lg:flex lg:justify-start mt-4'>
+            <nav className=''>
                 <ul className="flex gap-4 ml-4 md:ml-6 xl:ml-8 mt-8 font-semibold text-sm md:text-base">
                     {sections.map((section) => {
                         let expectedPathname;
@@ -47,7 +47,8 @@ const Nav = ({ sections }: { sections: string[] }) => {
                     })}
                 </ul>
             </nav>
-            <div className='flex flex-col items-end'>
+            <div className='invisible lg:visible flex-1'/>
+            <div className='flex flex-col items-end lg:flex-row'>
                 <div className=' mr-7 sm:ml-auto mt-4 sm:mt-4 md:mt-2 lg:mt-0'>
                     <a
                         href='https://www.doctify.com/en-ae/specialist/aqeel-farooque'
@@ -57,7 +58,7 @@ const Nav = ({ sections }: { sections: string[] }) => {
                         <Image src={doctify_rating} alt="doctify rating"/>
                     </a>
                 </div>
-                <label className='flex md:justify-center mr-3 mb-4 ml-48 md:mt-6 lg:mt-7 md:ml-0'>
+                <label className='flex lg:m-6 md:justify-center mr-3 mb-4 ml-48 md:mt-6 lg:mt-7 md:ml-0'>
                     <select
                         name="selectedLanguage"
                         defaultValue={localActive}
