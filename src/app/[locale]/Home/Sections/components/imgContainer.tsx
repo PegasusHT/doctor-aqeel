@@ -26,8 +26,8 @@ const ImageContainer: React.FC<ImageContainerProps> = ({
                 transition={{ duration: 1, type: 'tween'}}
             >
                 <Image src={imageUrl} alt={altText} width={140} height={50}/>
-                <h1 className="text-lg font-bold">{title}</h1>
-                <p>{description}</p>
+                <h1 className="text-lg lg:text-3xl lg:mt-3 font-bold">{title}</h1>
+                <p className='lg:text-lg text-center'>{description}</p>
             </motion.div>
             {position === 'right' && <div className='lg:w-5/12' />}
         </div>

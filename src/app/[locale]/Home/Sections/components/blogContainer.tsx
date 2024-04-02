@@ -12,16 +12,12 @@ interface BlogContainerProps {
 }
 
 const BlogContainer: React.FC<BlogContainerProps> = ({ title, date, content, imageUrl, blogId }) => {
-    const imgVariants = {
-        hidden: { x: -100, opacity: 0 },
-        visible: { x: 0, opacity: 1, transition: { duration: 1.2, ease: 'easeInOut' } },
-    };
 
     return (
-        <div className="bg-white rounded mb-10 gap-2 m-7 border-[1px] border-black">
-            <img
+        <div className="bg-white rounded mb-10 gap-2 m-7 border-[1px] border-black lg:w-1/3 relative pb-16 ">
+            <Image
                 src={imageUrl}
-                alt="Blog Image"
+                alt="Blog Image" width={300} height={200}
                 className="w-full mb-4"
             />
             <h3 className="text-lg font-bold mb-2 px-5">{title}</h3>
@@ -29,7 +25,7 @@ const BlogContainer: React.FC<BlogContainerProps> = ({ title, date, content, ima
             <p className="text-gray-700 mb-4 px-5">{content}</p>
             <Link href={`/blog/${blogId}`}>
 
-                <button className="px-4 py-2 rounded-full border-black bg-gray-500 text-white mx-5 mb-5">Read More</button>
+                <button className="px-4 py-2 rounded-full border-black bg-gray-500 text-white absolute bottom-0 mx-5 mb-5">Read More</button>
             </Link>
         </div>
     );

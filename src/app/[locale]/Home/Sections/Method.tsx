@@ -50,7 +50,7 @@ const Method: React.FC = () => {
                     {imageData.map((data, index) => {
                         const pos = index % 2 === 0 ? 'right' : 'left';
                         return (
-                            <div>
+                            <div key={index}>
                                 <ImageContainer
                                     key={index} position={pos}
                                     imageUrl={data.imageUrl}
