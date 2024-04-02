@@ -40,7 +40,7 @@ const Nav = ({ sections }: { sections: string[] }) => {
                         return (
                             <li key={section}>
                                 <Link href={linkHref}>
-                                    <span className={isActive ? 'text-red-500' : ''}>{section}</span>
+                                    <span className={isActive ? 'text-red-900' : ''}>{section}</span>
                                 </Link>
                             </li>
                         );

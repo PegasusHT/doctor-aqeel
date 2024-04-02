@@ -4,16 +4,17 @@ import { BsFillArrowUpSquareFill } from "react-icons/bs";
 
 const Marker: React.FC = () => {
     return (
-        <div className="bg-gray-300 flex md:justify-center text-center pt-2 md:h-12 pb-2">
+        <div className="bg-gray-300 flex md:justify-center lg:items-center text-center pt-2 md:h-12 lg:h-16 pb-2">
             <div className='flex-1'></div>
-            <p className="text-xs mx-auto ml-auto pt-2">&copy; 2023 by Dr. Aqeel Farooque. All rights reserved.</p>
+            <p className="text-xs lg:text-xl mx-auto ml-auto pt-2">&copy; 2023 by Dr. Aqeel Farooque. All rights reserved.</p>
             <div className='flex justify-end flex-1'>
-                <div className="fixed bottom-0 right-1 pr-5 ">
+                <div className="fixed bottom-[-2px] lg:bottom-0 right-1 lg:right-4 pr-2 ">
                     <button onClick={() => window.scrollTo(0, 0)} className="focus:outline-none">
-                        <BsFillArrowUpSquareFill size={30} color={'#046bd2'} />
+                        <BsFillArrowUpSquareFill color={'#046bd2'} 
+                            className='block text-3xl lg:text-5xl' />
                     </button>
                 </div>
-            </div>
+            </div> 
         </div>
 
     );
