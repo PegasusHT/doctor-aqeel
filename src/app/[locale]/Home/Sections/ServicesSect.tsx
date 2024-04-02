@@ -31,17 +31,20 @@ const ServicesSect: React.FC = () => {
     ];
 
     return (
-        <div className="bg-gray-200 flex flex-col items-center gap-20 p-8" ref={ref}>
-            {imageData.map((data, index) => (
-                <motion.div
-                    key={index}
-                    initial={{ x: '-100vw' }}
-                    animate={{ x: inView ? 0 : '-100vw' }}
-                    transition={{ type: 'tween', duration: 1.2 }}
-                >
-                    <ServiceImage data={data}/>
-                </motion.div>
-            ))}
+        <div className='text-center'>
+            <div className="bg-gray-200 flex flex-col lg:flex-row items-center lg:items-start gap-20 lg:gap-10 p-8" ref={ref}>
+                {imageData.map((data, index) => (
+                    <motion.div
+                        key={index}
+                        initial={{ x: '-100vw' }}
+                        animate={{ x: inView ? 0 : '-100vw' }}
+                        transition={{ type: 'tween', duration: 1.2 }}
+                    >
+                        <ServiceImage data={data}/>
+                    </motion.div>
+                ))}
+             
+            </div>
             <motion.div
                 initial={{ x: '-100vw' }}
                 animate={{ x: inView ? 0 : '-100vw' }}
@@ -49,7 +52,7 @@ const ServicesSect: React.FC = () => {
             >
                 <Link href={`/${localActive}/services`}>
                     <button
-                        className='relative z-30 mt-[-2rem] mb-[-4rem] h-8 w-36 rounded-full text-white font-semibold'
+                        className='relative z-30 mt-1 mb-[-4rem] h-8 w-36 rounded-full text-white font-semibold'
                         style={{ backgroundColor: '#961b1e' }}
                     >
                         See Services
@@ -57,6 +60,7 @@ const ServicesSect: React.FC = () => {
                 </Link>
             </motion.div>
         </div>
+
     );
 };
 

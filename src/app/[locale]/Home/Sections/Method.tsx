@@ -38,24 +38,29 @@ const Method: React.FC = () => {
     });
 
     return (
-        <div className="flex flex-col mt-32 items-center gap-2" ref={ref}>
-            <h2 className="text-xl font-semibold">Methodology</h2>
-            <h1 className='text-2xl font-bold'>This is conducted through:</h1>
+        <div className="flex flex-col mt-24 lg:mb-28 items-center gap-2" ref={ref}>
+            <h2 className="text-xl lg:text-2xl font-semibold">Methodology</h2>
+            <h1 className='text-2xl lg:text-3xl font-bold'>This is conducted through:</h1>
             <motion.div
                 initial={{ x: '-100vw' }}
                 animate={{ x: inView ? 0 : '-100vw' }}
                 transition={{ duration: 1, type: 'tween' }}
             >
-                <div className="flex flex-col mt-10 px-5 gap-8 mb-10">
-                    {imageData.map((data, index) => (
-                        <ImageContainer
-                            key={index}
-                            imageUrl={data.imageUrl}
-                            altText={data.altText}
-                            title={data.title}
-                            description={data.description}
-                        />
-                    ))}
+                <div className="flex flex-col my-10 px-5 gap-14 lg:mt-40 ">
+                    {imageData.map((data, index) => {
+                        const pos = index % 2 === 0 ? 'right' : 'left';
+                        return (
+                            <div>
+                                <ImageContainer
+                                    key={index} position={pos}
+                                    imageUrl={data.imageUrl}
+                                    altText={data.altText}
+                                    title={data.title}
+                                    description={data.description}
+                                />
+                            </div>
+                        );
+                    })}
                 </div>
             </motion.div>
         </div>
