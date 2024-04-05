@@ -64,7 +64,7 @@ const Nav = ({ sections }: { sections: string[] }) => {
                         defaultValue={localActive}
                         disabled={isPending}
                         onChange={handleLanguageChange}
-                        className="bg-gray-200 border border-gray-300 mr-4 h-8 ml-auto md:ml-0 text-xs md:text-base mt-2 p-1"
+                        className="bg-gray-200 border border-gray-300 mr-4 h-8 ml-auto md:ml-0 text-xs md:text-base mt-1 p-1"
                     >
                         <option value="en">English</option>
                         <option value="ar">Arabic</option>
