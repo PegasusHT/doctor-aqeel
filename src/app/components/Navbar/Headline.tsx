@@ -9,13 +9,13 @@ const Headline = ({ title }: { title: string }) => {
                 <a href="https://dr-aqeel.com/">
                     <Image
                         src="https://dr-aqeel.com/wp-content/uploads/2024/01/Dr.aqeel-farooque-logo-png-01-1024x1024.png"
-                        className="mt-[-50px] mb-[-60px] lg:mt-6 lg:ml-[-16px] lg:mb-0 h-52 lg:h-[21rem]"
+                        className="mt-[-50px] mb-[-60px] lg:mt-6 lg:ml-[-12px] lg:mb-0 h-52 lg:h-[21rem]"
                         width={400} height={400}
                         alt='logo'
                     />
                 </a>
             </div>
-            <div className="w-full lg:w-5/12 ">
+            <div className="w-full lg:w-5/12 lg:ml-4 ">
                 <h2 className="leading-5 font-semibold text-2xl md:text-5xl mt-5">{title}</h2>
                 <h2 className="font-normal mt-4 text-base lg:text-xl ">MBBS CCT (UK) FRCPCH (UK)</h2>
             </div>

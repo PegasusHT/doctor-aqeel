@@ -8,7 +8,7 @@ const Blog: React.FC = () => {
     return (
         <div className="flex flex-col items-center">
             <h2 className="text-4xl lg:text-6xl font-bold mb-4 mt-10 lg:mt-5">Blog</h2>
-            <div className='mb-8'>
+            <div className='mb-8 '>
                 {Blogs.filter((_, index) => index % 2 === 0).map((blog, index) => (
                     <div key={index} className='flex justify-center items-center flex-col lg:flex-row lg:justify-start '>
                         <BlogContainer
