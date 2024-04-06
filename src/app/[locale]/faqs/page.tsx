@@ -14,7 +14,7 @@ const FAQs: React.FC = () => {
                     </div>
                 </div>
                 <div className="relative z-10 flex flex-col justify-center items-center text-white text-lg lg:text-2xl font-bold">
-                    <h2 className='text-7xl' >FAQs</h2>
+                    <h2 className='text-6xl lg:text-7xl' >FAQs</h2>
                 </div>
             </div>
             <div className='flex items-center justify-center'>
