@@ -22,7 +22,7 @@ const Nav = ({ sections }: { sections: string[] }) => {
     return (
         <div className='gap-4 lg:flex lg:justify-start mt-4'>
             <nav className=''>
-                <ul className="flex gap-4 ml-4 md:ml-6 xl:ml-8 mt-8 font-semibold text-sm md:text-base">
+                <ul className="flex gap-4 ml-4 md:ml-6 xl:ml-8 mt-8 font-semibold text-sm md:text-base lg:text-xl">
                     {sections.map((section) => {
                         let expectedPathname;
                         let linkHref;
@@ -49,22 +49,24 @@ const Nav = ({ sections }: { sections: string[] }) => {
             </nav>
             <div className='invisible lg:visible flex-1'/>
             <div className='flex flex-col items-end lg:flex-row'>
-                <div className=' mr-7 sm:ml-auto mt-4 sm:mt-4 md:mt-2 lg:mt-0'>
+                <div className=' mr-7 w-40 lg:w-full sm:ml-auto mt-4 sm:mt-4 md:mt-2 lg:mb-1'>
                     <a
                         href='https://www.doctify.com/en-ae/specialist/aqeel-farooque'
                         target='_blank'
                         className='md:mr-8'
                     >
-                        <Image src={doctify_rating} alt="doctify rating"/>
+                        <Image src={doctify_rating} 
+                            width={210} height={120}
+                            alt="doctify rating"/>
                     </a>
                 </div>
-                <label className='flex lg:m-6 md:justify-center mr-3 mb-4 ml-48 md:mt-6 lg:mt-7 md:ml-0'>
+                <label className='flex lg:m-6 md:justify-center mr-3 mb-4 ml-48 md:mt-6 lg:mt-7 lg:w-32 md:ml-0'>
                     <select
                         name="selectedLanguage"
                         defaultValue={localActive}
                         disabled={isPending}
                         onChange={handleLanguageChange}
-                        className="bg-gray-200 border border-gray-300 mr-4 h-8 ml-auto md:ml-0 text-xs md:text-base mt-1 p-1"
+                        className="bg-gray-200 border border-gray-300 mr-4 h-8 lg:h-12 ml-auto md:ml-0 text-xs md:text-base lg:text-xl mt-1 p-1 lg:px-4"
                     >
                         <option value="en">English</option>
                         <option value="ar">Arabic</option>

@@ -10,7 +10,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ title, sections }) => {
 
     return (
-        <div className="grid grid-rows-2 ">
+        <div className="lg:mb-8 ">
             <div className="flex justify-center w-full">
                 <Headline title={title} />
             </div>
