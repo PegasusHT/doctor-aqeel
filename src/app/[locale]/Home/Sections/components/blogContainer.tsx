@@ -14,7 +14,7 @@ interface BlogContainerProps {
 const BlogContainer: React.FC<BlogContainerProps> = ({ title, date, content, imageUrl, blogId }) => {
 
     return (
-        <div className="bg-white rounded mb-10 gap-2 m-7 border-[1px] border-black lg:w-1/3 relative pb-16 ">
+        <div className="bg-white rounded mb-10 gap-2 m-7 border-[1px] border-black lg:w-5/12 relative pb-16 ">
             <Image
                 src={imageUrl}
                 alt="Blog Image" width={300} height={200}
