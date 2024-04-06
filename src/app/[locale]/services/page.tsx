@@ -18,7 +18,7 @@ const Services: React.FC = () => {
                         const nextService = array[index + 1];
                         const isRight = Math.floor(index / 2) % 2 === 0 ? false : true;
                         return (
-                            <div key={index} className='flex justify-center items-center flex-col lg:flex-row '>
+                            <div key={index} className='flex flex-col lg:flex-row '>
                                 <ServiceContainer
                                     key={index}
                                     isRight={isRight}

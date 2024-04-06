@@ -50,7 +50,7 @@ const ServiceContainer: React.FC<ServiceContainerProps> = ({
                     alt={altText}
                     width={400}
                     height={300}
-                    className='hidden lg:block h-[23rem] w-1/2 items-start px--5'
+                    className='hidden lg:block h-[20rem] w-1/2 items-start px--5'
                 />
             )}
             {isRight ? (
@@ -59,7 +59,7 @@ const ServiceContainer: React.FC<ServiceContainerProps> = ({
                     alt={altText}
                     width={400}
                     height={300}
-                    className='hidden lg:block h-[23rem] w-1/2 items-start px-5'
+                    className='hidden lg:block h-[20rem] w-1/2 items-start px-5'
                 />
             ) : (
                 <div className='hidden lg:block'>
