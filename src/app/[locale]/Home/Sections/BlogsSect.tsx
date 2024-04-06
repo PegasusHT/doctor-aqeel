@@ -16,23 +16,19 @@ const BlogSection: React.FC = () => {
 
     return (
         <div className="flex flex-col items-center bg-gray-100" ref={ref}>
-            <h2 className="text-2xl font-bold mb-4 mt-10">Recent Blogs</h2>
-
-            <motion.div
-                initial={{ x: '-100vw' }}
-                animate={{ x: inView ? 0 : '-100vw' }}
-                transition={{ duration: 1, type: 'tween' }}
-            >
-                {Blogs.map((blog, index) => (
-                    <BlogContainer
-                        key={index} blogId={blog.blogId}
-                        imageUrl={blog.imageUrl}
-                        title={blog.title}
-                        date={blog.date}
-                        content={blog.shortDes}
-                    />
-                ))}
-            </motion.div>
+            <h2 className="text-2xl lg:text-4xl font-bold mb-4 mt-10">Recent Blogs</h2>
+            <div className='lg:flex lg:flex-row'>
+    
+                    {Blogs.map((blog, index) => (
+                        <BlogContainer
+                            key={index} blogId={blog.blogId}
+                            imageUrl={blog.imageUrl}
+                            title={blog.title}
+                            date={blog.date}
+                            content={blog.shortDes}
+                        />
+                    ))}
+            </div>
 
             <motion.div
                 initial={{ x: '-100vw' }}
@@ -42,7 +38,7 @@ const BlogSection: React.FC = () => {
             >
                 <Link href={`/${localActive}/blog`}>
                     <button
-                        className="relative z-30 mt-8 mb-10 h-8 w-36 rounded-full text-white font-semibold"
+                        className="relative z-30 mt-8 mb-10 h-8 lg:h-12 lg:w-44 w-36 rounded-full text-white lg:text-xl font-semibold"
                         style={{ backgroundColor: '#961b1e' }}
                     >
                         More Blogs

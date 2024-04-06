@@ -11,7 +11,7 @@ const Map = () => {
     }, []);
 
     return (
-        <div className="relative h-96 mx-6 my-10">
+        <div className="relative h-96 lg:h-[16rem] lg:w-full mr-4 my-10 lg:mr-10">
             <iframe
                 ref={mapRef}
                 className="w-full h-full"

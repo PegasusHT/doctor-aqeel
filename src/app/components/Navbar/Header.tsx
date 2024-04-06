@@ -10,11 +10,11 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ title, sections }) => {
 
     return (
-        <div className="grid grid-rows-2 lg:w-4/5 mx-auto">
-            <div className="flex justify-center ">
+        <div className="lg:mb-4 ">
+            <div className="flex justify-center w-full">
                 <Headline title={title} />
             </div>
-            <div className="w-full">
+            <div className="">
                 <Nav sections={sections} />
             </div>
         </div>

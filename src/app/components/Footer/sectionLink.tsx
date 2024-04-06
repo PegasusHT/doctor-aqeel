@@ -25,7 +25,7 @@ const SectionLink = ({ sections }: { sections: string[] }) => {
                 return (
                     <a key={section}>
                         <Link href={linkHref}>
-                            <span className={isActive ? 'text-rose-600 active-link' : 'text-black'}>{section}</span>
+                            <span className={isActive ? 'text-red-900 active-link' : 'text-black'}>{section}</span>
                         </Link>
                     </a>
                 );

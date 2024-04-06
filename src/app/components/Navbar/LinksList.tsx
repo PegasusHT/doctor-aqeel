@@ -24,7 +24,7 @@ const LinkList: React.FC<{ position: string }> = ({ position }) => (
         {socialLinks.map((link, index) => (
             <li key={index} className="">
                 <a href={link.url}>
-                    <span className={` text-red-500 ${position === 'head' ? 'text-xl' : 'text-lg'}`}>
+                    <span className={`${position === 'head' ? 'text-xl lg:text-2xl' : 'text-2xl '}`} style={{color:'#961B1E'}}>
                         {link.icon}
                     </span>
                 </a>

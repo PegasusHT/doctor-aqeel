@@ -22,11 +22,11 @@ const QuestionContainer: React.FC<QuestionContainerProps> = ({ question, answer,
     return (
         <div className="mx-4 mb-4 rounded-lg shadow-md ">
             <div className="flex flex-row items-start bg-gray-200 px-4 py-3">
-                <h2 className="font-semibold text-black text-sm flex items-start"> 
-                    <FaAngleRight className="mr-2 mt-1 " />
+                <h2 className="font-semibold text-black text-sm lg:text-lg flex items-start"> 
+                    <FaAngleRight className="mr-2 mt-1 lg:text-lg" />
                     {question}
                 </h2>
-                <div className="ml-auto cursor-pointer text-sm mt-1" onClick={toggleAnswer} >
+                <div className="ml-auto cursor-pointer text-sm lg:text-lg mt-1" onClick={toggleAnswer} >
                   {icon}
                 </div>
             
@@ -37,7 +37,7 @@ const QuestionContainer: React.FC<QuestionContainerProps> = ({ question, answer,
                 enterFrom="transform opacity-0 scale-95"
                 enterTo="transform opacity-100 scale-100"
             >
-                <div className="mt-1 p-4 pt-2 text-sm ">
+                <div className="mt-1 p-4 pt-2 text-sm lg:text-base ">
                     <p>{answer}</p>
                     <a href={link} className="text-blue-500 hover:underline">
                         {link}

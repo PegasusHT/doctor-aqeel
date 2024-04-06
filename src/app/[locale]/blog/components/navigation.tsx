@@ -11,7 +11,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentBlogId, totalBlogs }) =>
     const showNextPost = currentBlogId > 1;
 
     return (
-        <div className='flex flex-row mx-5 text-sm'>
+        <div className='flex flex-row mx-10 lg:mx-16 text-sm lg:text-xl '>
             {showPreviousPost && (
                 <Link href={`/blog/${currentBlogId + 1}`}>
                     <p className='text-blue-500 '>
