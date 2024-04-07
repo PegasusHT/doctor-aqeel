@@ -2,11 +2,11 @@ import LinkList from './LinksList';
 import Image from 'next/image';
 
 const Headline = ({ title }: { title: string }) => {
-
+    const homepageLink = process.env.NEXT_PUBLIC_PAGE_URL;
     return (
         <div className="flex text-center items-center lg:w-screen lg:h-48"> 
             <div className="w-full lg:w-3/12 flex items-center justify-center lg:justify-start lg:ml-8">
-                <a href="https://dr-aqeel.com/">
+                <a href={homepageLink}>
                     <Image
                         src="https://dr-aqeel.com/wp-content/uploads/2024/01/Dr.aqeel-farooque-logo-png-01-1024x1024.png"
                         className="mt-[-50px] mb-[-60px] lg:mt-6 lg:ml-[-12px] lg:mb-0 h-52 lg:h-[21rem]"

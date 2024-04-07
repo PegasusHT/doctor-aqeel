@@ -47,8 +47,7 @@ const Home: React.FC = () => {
                 transition={{ type: 'tween' }}
                 >
                     <Link href={`/${localActive}/services`}>
-                        <button className='relative z-30 mt-10 h-10 w-44 rounded-full text-white font-semibold'
-                        style={{ backgroundColor: '#961b1e'}}>
+                        <button className='relative z-30 mt-10 h-10 w-44 rounded-full text-white font-semibold bg-red-800 border-white border-2 hover:bg-white hover:text-red-800 hover:border-red-800 '>
                             See Services
                         </button>
                     </Link>
