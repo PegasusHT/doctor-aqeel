@@ -19,9 +19,62 @@
     "getStarted": "Get Started"
   },
   
-  "Home": {
-    "title": "Home",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "getStarted": "Get Started"
+  "HomeMain": {
+    "Hollistic": "Hollistic care",
+    "for you": "for you",
+    "and your": "and your",
+    "hormones": "hormones",
+    "exceptional": "Exceptional care in endocrinology for children and adolescents",
+    "See Services": "See Services"
+  },
+  "HomeHero": {
+    "Title": "About",
+    "Name": "Dr Aqeel Farooque",
+    "Description": "Expert in children&apos;s diabetes and endocrine diseases",
+    "Intro-p1": "Dr Aqeel Farooque is a highly qualified and experienced Pediatric Endocrinologist who is passionate about helping children with endocrine-related health issues.",
+    "Intro-p2": "He currently serves as the head of the Diabetes & Endocrinology Unit at Al Qassimi Women&apos;s & Children&apos;s Hospital, Sharjah. This is a tertiary referral center providing care for children of the Northern Emirates, with complex endocrine-related health issues.",
+    "Read More": "Read More"
+  },
+  "HomeMethod":{
+    "Title": "Mothodology",
+    "Intro": "This is conducted through:",
+    "Consultations-Title": "Consultations",
+    "Consultations-Description": "Dr Aqeel will review the child's medical history, perform a physical exam, and order any necessary lab tests or imaging studies.",
+    "Testing-title": "Testing",
+    "Testing-Description": "These tests may include blood tests, imaging studies (such as X-rays, Ultrasound, MRI, etc.), and hormone stimulation tests.",
+    "Treatment-Title": "Treatment",
+    "Treatment-Description": "Once a diagnosis has been made, Dr Aqeel will work with the child and their family to develop a treatment plan. Treatment may include medications, hormone replacement therapy, lifestyle changes, or surgery in some cases.",
+    "Hollistic-Title": "Holistic Support",
+    "Hollistic-Description": "He makes an extra effort to provide tailored treatment plans to meet the unique needs of each child."
+  },
+  "HomeBlog": {
+    "Title": "Recent Blogs",
+    "Read More": "Read More"
+  },
+
+  "BlogData": {
+    "Title": "Which Growth Hormone is best for my child’s growth?",
+    "date1": "January 3, 2024",
+    "CopyTitle": "Copy of Which Growth Hormone is best for my child’s growth?",
+    "date2": "January 2, 2024",
+    "date3": "January 1, 2024",
+    "shortDes": "If your pediatric endocrinologist feels that your child needs growth hormone injections to achieve optimal height, they may have already suggested a few different options of growth hormone pens or...",
+    "fullDesc": [
+        "If your pediatric endocrinologist feels that your child needs growth hormone injections to achieve optimal height, they may have already suggested a few different options of growth hormone pens or devices. And perhaps, you maybe reading this to help decide “the best” growth hormone. The one that has the maximum benefit and least side effect of all makes in the market.",
+        "Look no further, because I have the answer you …. its ALL THE SAME! All the growth hormone use recombinant DNA (rDNA) technology, a well tried, tested and widely used method to produce many medicines from hormones to antibiotics and blood products. They all undergo a purification and testing process to make sure they are well within WHO standards.",
+        "The daily growth hormone is the traditional one, that has been tested over the past few decades to be very safe when used according to the doctor’s recommendations for dosage and storage.",
+        "Over the last year, we now have access to newer weekly growth hormones, that use tried and tested biotechnologies to make its effect last a week.",
+        "So here is a quick answer: the best growth hormone for you and your child is the one you can afford throughout the duration of the treatment (generally many years), the one you can remember to give everyday, and the one that is easily available."
+    ],
+    "Read More": "Read More"
+  },
+  "ServicesData": {
+    "title": "Services",
+    "description": "His clinical expertise lies in pediatric diabetes & endocrinology, and he provides consultations for a wide range of endocrine-related health problems in children, including type 1, 2, and rare types of diabetes, as well as issues related to growth, puberty, thyroid, adrenal, pituitary, sex development, calcium, and metabolic bone disorders. He also works with children who have genetic abnormalities that may cause endocrine problems.",
+    "See Services": "See Services",
+    "Diabetes Management": "Diabetes Management",
+    "Growth Disorders": "Growth Disorders",
+    "Puberty Disorders": "Puberty Disorders"
   }
+ 
 }

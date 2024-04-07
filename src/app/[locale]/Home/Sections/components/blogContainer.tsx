@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import {useTranslations} from 'next-intl';
 
 interface BlogContainerProps {
     title: string;
@@ -12,6 +13,7 @@ interface BlogContainerProps {
 }
 
 const BlogContainer: React.FC<BlogContainerProps> = ({ title, date, content, imageUrl, blogId }) => {
+    const t = useTranslations('BlogData');
 
     return (
         <div className='p-5 lg:w-6/12 '>
@@ -24,12 +26,12 @@ const BlogContainer: React.FC<BlogContainerProps> = ({ title, date, content, ima
                     />
                 </div>
                 
-                <h3 className="text-lg font-bold mb-2 px-5">{title}</h3>
-                <p className="text-gray-500 mb-2 px-5">{date}</p>
-                <p className="text-gray-700 mb-4 px-5">{content}</p>
+                <h3 className="text-lg font-bold mb-2 px-5">{t(title)}</h3>
+                <p className="text-gray-500 mb-2 px-5">{t(date)}</p>
+                <p className="text-gray-700 mb-4 px-5">{t(content)}</p>
                 <Link href={`/blog/${blogId}`}>
 
-                    <button className="px-4 py-2 rounded-full border-black bg-gray-500 text-white absolute bottom-0 mx-5 mb-5">Read More</button>
+                    <button className="px-4 py-2 rounded-full border-black bg-gray-500 text-white absolute bottom-0 mx-5 mb-5">{t('Read More')}</button>
                 </Link>
             </div>
         </div>

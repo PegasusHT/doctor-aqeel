@@ -4,12 +4,14 @@ import { motion } from 'framer-motion';
 import ServiceImage from './components/servicesImg';
 import Link from 'next/link';   
 import { useLocale } from 'next-intl';
+import {useTranslations} from 'next-intl';
 
 const ServicesSect: React.FC = () => {
     const [ref, inView] = useInView({
         triggerOnce: true,
     });
     const localActive = useLocale();
+    const t = useTranslations('ServicesData');
 
     const imageData = [
         {
@@ -71,7 +73,7 @@ const ServicesSect: React.FC = () => {
                 <Link href={`/${localActive}/services`}>
                     <button
                         className='relative z-30 mt-1 mb-[-4rem] h-8 w-36 rounded-full text-white font-semibold bg-red-800 border-white border-2 hover:bg-white hover:text-red-800 hover:border-red-800 '>
-                        See Services
+                        {t('See Services')}
                     </button>
                 </Link>
             </motion.div>

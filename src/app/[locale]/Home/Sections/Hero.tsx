@@ -4,12 +4,14 @@ import { useInView } from 'react-intersection-observer';
 import Image from 'next/image';
 import Link from 'next/link';
 import ServiceHeroDesc from './components/serviceHeroDesc'; 
+import {useTranslations} from 'next-intl';
 
 const Hero: React.FC = () => {
     const [ref, inView] = useInView({
         triggerOnce: true,
         threshold: 0.2,
     });
+    const translations = useTranslations('HomeHero');
 
     return (
         <div className="" >
@@ -30,7 +32,7 @@ const Hero: React.FC = () => {
                         transition={{ type: 'tween', duration: 1.15 }}
                     >
                         <div className="">
-                            <h1 className="text-2xl font-bold">About</h1>
+                            <h1 className="text-2xl font-bold">{translations('Title')}</h1>
                         </div>
                     </motion.div>
                     <motion.div
@@ -38,7 +40,7 @@ const Hero: React.FC = () => {
                         animate={{ x: inView ? 0 : '100vw', opacity: inView ? 1 : 0 }}
                         transition={{ type: 'tween', duration: 1.18 }}
                     >
-                        <h2 className="text-lg lg:text-3xl lg:font-bold lg:py-2">Dr Aqeel Farooque</h2>
+                        <h2 className="text-lg lg:text-3xl lg:font-bold lg:py-2">{translations('Name')}</h2>
                     </motion.div>
                     <motion.div
                         initial={{ x: '100vw', opacity: 0 }}
@@ -47,15 +49,15 @@ const Hero: React.FC = () => {
                     >
                         <div className="lg:pr-7">
                             <p className="mr-10 text-lg lg:text-xl" style={{ color: '#2c2c74' }}>
-                                Expert in children&apos;s diabetes and endocrine diseases
+                                {translations('Description')}
                             </p>
                         </div>
                         <div className="text-sm lg:text-lg gap-x-2 mr-10 mt-2 tracking-wide">
                             <p className="">
-                                Dr Aqeel Farooque is a highly qualified and experienced Pediatric Endocrinologist who is passionate about helping children with endocrine-related health issues.
+                                {translations('Intro-p1')}
                             </p>
                             <p>
-                                He currently serves as the head of the Diabetes & Endocrinology Unit at Al Qassimi Women&apos;s & Children&apos;s Hospital, Sharjah. This is a tertiary referral center providing care for children of the Northern Emirates, with complex endocrine-related health issues.
+                                {translations('Intro-p2')}
                             </p>
                         </div>
                     </motion.div>
@@ -68,7 +70,7 @@ const Hero: React.FC = () => {
                             <Link href="/en/about">
                                 <button
                                     className='relative z-30 h-9 lg:h-12 w-28 lg:w-36 lg:mt-4 rounded-full text-white text-sm lg:text-lg font-semibold bg-red-800 border-white border-2 hover:bg-white hover:text-red-800 hover:border-red-800 '>
-                                    Read More
+                                    {translations('Read More')}
                                 </button>
                             </Link>
                         </div>

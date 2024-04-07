@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { useTranslations } from 'next-intl';
 import Hero from './Sections/Hero';
 import ServicesSect from './Sections/ServicesSect';
 import Method from './Sections/Method';
@@ -9,9 +8,10 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useLocale } from 'next-intl';
 import Link from 'next/link';
+import {useTranslations} from 'next-intl';
 
 const Home: React.FC = () => {
-    const translations = useTranslations('Home');
+    const translations = useTranslations('HomeMain');
     const [ref, inView] = useInView({
         triggerOnce: true,
     });
@@ -33,14 +33,14 @@ const Home: React.FC = () => {
                     >
                         <h1 className='text-3xl lg:text-6xl mt-28 lg:mt-16 font-bold'>
                             <div className='flex flex-row items-center justify-center'>
-                                <p className='' style={{ color: '#961b1e' }}>Holistic care </p>
-                                <p className='pl-3'>for you </p>
+                                <p className='' style={{ color: '#961b1e' }}>{translations('Hollistic')} </p>
+                                <p className='pl-3'>{translations('for you')} </p>
                             </div>
-                            <p>and your
+                            <p>{translations('and your') }
                                 <br />
-                                hormones</p>
+                                {translations('hormones')}</p>
                         </h1>
-                        <p className='lg:text-xl relative z-30 text-xs mt-6'>Exceptional care in endocrinology for children and adolescents</p>
+                        <p className='lg:text-xl relative z-30 text-xs mt-6'>{translations('exceptional')}</p>
                     </motion.div>
                     <motion.div
                         initial={{ opacity: 0, y: '15vh' }}
@@ -49,7 +49,7 @@ const Home: React.FC = () => {
                     >
                         <Link href={`/${localActive}/services`}>
                             <button className='relative z-30 mt-10 h-10 w-44 rounded-full text-white font-semibold bg-red-800 border-white border-2 hover:bg-white hover:text-red-800 hover:border-red-800 '>
-                                See Services
+                                {translations('See Services')}
                             </button>
                         </Link>
                     </motion.div>

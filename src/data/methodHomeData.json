@@ -1,0 +1,28 @@
+{
+    "ImageData": [
+        {
+            "imageUrl": "https://dr-aqeel.com/wp-content/uploads/2024/01/a7f350_f3639d34dc8d4eafbd86e800ba871e0emv2.png",
+            "altText": "Consultations - Doctor reviewing child's medical history",
+            "title": "Consultations-Title",
+            "description": "Consultations-Description"
+        },
+        {
+            "imageUrl": "https://dr-aqeel.com/wp-content/uploads/2024/01/a7f350_f5b282c756e4499195abd5019669619amv2.png",
+            "altText": "Testing - Blood tests and imaging studies",
+            "title": "Testing-title",
+            "description": "Testing-Description"
+        },
+        {
+            "imageUrl": "https://dr-aqeel.com/wp-content/uploads/2024/01/a7f350_cc6ffef0eef6407d853d75ff2414fb33mv2.png",
+            "altText": "Treatment - Developing a treatment plan",
+            "title": "Treatment-Title",
+            "description": "Treatment-Description"
+        },
+        {
+            "imageUrl": "https://dr-aqeel.com/wp-content/uploads/2024/01/a7f350_767221498ff34915b92478bc496310a6mv2.png",
+            "altText": "Holistic Support - Tailored treatment plans",
+            "title": "Hollistic-Title",
+            "description": "Hollistic-Description"
+        }
+    ]
+}

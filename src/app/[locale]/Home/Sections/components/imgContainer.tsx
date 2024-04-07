@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useInView } from 'react-intersection-observer';
+import {useTranslations} from 'next-intl';
 
 interface ImageContainerProps {
     imageUrl: string;
@@ -21,6 +22,7 @@ const ImageContainer: React.FC<ImageContainerProps> = ({
         triggerOnce: true,
         threshold: 0.2,
     });
+    const t = useTranslations('HomeMethod');
 
     return (
         <div className='flex flex-row items-center justify-center' ref={ref}>
@@ -32,8 +34,8 @@ const ImageContainer: React.FC<ImageContainerProps> = ({
                 transition={{ duration: 0.8, type: 'tween'}}
             >
                 <Image src={imageUrl} alt={altText} width={140} height={50}/>
-                <h1 className="text-lg lg:text-3xl lg:mt-3 font-bold">{title}</h1>
-                <p className='lg:text-lg text-center'>{description}</p>
+                <h1 className="text-lg lg:text-3xl lg:mt-3 font-bold">{t(title)}</h1>
+                <p className='lg:text-lg text-center'>{t(description)}</p>
             </motion.div>
             {position === 'right' && <div className='lg:w-5/12' />}
         </div>

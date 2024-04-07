@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Blogs  from '../../../../data/blogData.json';
 import Link from 'next/link';   
 import { useLocale } from 'next-intl';
+import {useTranslations} from 'next-intl';
 
 const BlogSection: React.FC = () => {
     const [ref, inView] = useInView({
@@ -12,6 +13,7 @@ const BlogSection: React.FC = () => {
         threshold: 0.2,
     });
     const localActive = useLocale();
+    const t = useTranslations('HomeBlog');
 
     return (
         <div className="flex flex-col items-center bg-gray-100" ref={ref}>
@@ -20,7 +22,7 @@ const BlogSection: React.FC = () => {
                 animate={{ x: inView ? 0 : '100vw' }}
                 transition={{ duration: 1, type: 'tween' }}
             >
-                <h2 className="text-2xl lg:text-4xl font-bold mb-4 mt-10">Recent Blogs</h2>
+                <h2 className="text-2xl lg:text-4xl font-bold mb-4 mt-10">{t('Title')}</h2>
             </motion.div>
 
             <motion.div 
@@ -50,7 +52,7 @@ const BlogSection: React.FC = () => {
                 <Link href={`/${localActive}/blog`}>
                     <button
                         className="relative z-30 mt-8 mb-10 h-8 lg:h-12 lg:w-44 w-36 rounded-full text-white lg:text-xl font-semibold bg-red-800 border-white border-2 hover:bg-white hover:text-red-800 hover:border-red-800">
-                        More Blogs
+                        {t('Read More')}
                     </button>
                 </Link>
             </motion.div>
