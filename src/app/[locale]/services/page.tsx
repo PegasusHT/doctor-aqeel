@@ -1,15 +1,34 @@
+'use client';
 import React from 'react';
 import data from '../../../data/servicesData.json';
 import ServiceContainer from './components/serviceContainers';
-import ConductedThrough from './components/ConductedThrough';
+import ConductedThroughDiv from './components/ConductedThroughDiv';
+import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
 
 const Services: React.FC = () => {
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+    });
 
     return (
-        <div className='mb-14' >
+        <div className='mb-14' ref={ref}>
             <div className='flex flex-col items-center justify-center mt-12 lg:mt-2 ml-1 gap-3 h-30 mb-14'>
-                <h1 className='text-2xl lg:text-6xl font-bold lg:mb-3'> Clinical Services</h1>
-                <p className='text-xs lg:text-xl'>Healthy hormones, happy kids: compassionate and holistic care</p>
+                <motion.h1
+                    initial={{ opacity: 0, y: '-15vh' }}
+                    animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : '-25vh' }}
+                    transition={{ type: 'tween', duration: 0.8 }}
+                    className='text-2xl lg:text-6xl font-bold lg:mb-3'
+                >
+                    Clinical Services
+                </motion.h1>
+                <motion.p
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
+                    transition={{ type: 'tween', duration: 0.8 }}
+                >
+                    <p className='text-xs lg:text-xl'>Healthy hormones, happy kids: compassionate and holistic care</p>
+                </motion.p>
             </div>
 
             <div className='mb-6'>
@@ -44,18 +63,7 @@ const Services: React.FC = () => {
                 })}
             </div>
             
-            <h1 className='text-2xl lg:text-4xl font-bold text-center lg:mt-12'>This is conducted through:</h1>
-            <div className='flex flex-col lg:flex-row items-center '>
-                {data.ConductedThrough.map((container, index) => (
-                    <ConductedThrough
-                        id={index} key={index}
-                        imageUrl={container.imgUrl}
-                        altText={container.alt}
-                        title={container.title}
-                        desc={container.desc}
-                    />
-                ))}
-            </div>
+            <ConductedThroughDiv data={data}/>
         </div>
     );
 };

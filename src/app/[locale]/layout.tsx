@@ -36,7 +36,7 @@ export default function RootLayout({
 
   return (
     <html lang={locale}>
-      <body className={inter.className}>
+      <body className={inter.className + ' overflow-x-hidden'}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Header title={title} sections={sections} />
           <main className="">
