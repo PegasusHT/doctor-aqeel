@@ -11,56 +11,88 @@ interface ImageContainerProps {
         heading: string;
         content: string[];
     },
-    pos: number;
+    isRight?: boolean;
 }
 
-const ImageContainer: React.FC<ImageContainerProps> = ({ data, pos}) => {
-    const imageOnRight = pos % 2 === 0;
+const ImageContainer: React.FC<ImageContainerProps> = ({ data, isRight}) => {
+    
     return (
-      
-        <div className='flex flex-col lg:flex-row lg:w-screen lg:mt-12'>
-            {imageOnRight? 
-                <ImageParent data={data} pos={pos} /> 
-                :
-                <TextParent data={data} pos={pos} /> 
-            }
-            {imageOnRight ? 
-                <TextParent data={data} pos={pos} /> 
-                :
-                <ImageParent data={data} pos={pos} /> 
-            }
+        <div className=''>
+            <div className='lg:flex flex-row hidden w-screen mt-12'>
+                {isRight? 
+                    <TextParent data={data} isRight={isRight} /> 
+                    :
+                    <ImageParent data={data} isRight={isRight} /> 
+                }
+                {isRight ? 
+                    <ImageParent data={data} isRight={isRight} /> 
+                    :
+                    <TextParent data={data} isRight={isRight} /> 
+                }
+            </div>
+            <div className='lg:hidden'>
+                <ImageParent data={data} isRight={isRight} />
+                <TextParent data={data} isRight={isRight} />
+            </div>
         </div>
+      
     );
 
 };
 
 export default ImageContainer;
 
-const ImageParent: React.FC<ImageContainerProps> = ({ data }) => {
+const ImageParent: React.FC<ImageContainerProps> = ({ data, isRight }) => {
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+        threshold: 0.2,
+    });
+
     return (
-        <div className='lg:w-1/2 lg:h-full '>
-            <Image 
-                src={data.imageSrc}
-                alt={data.altText}
-                width={1000} height={1200}
-                className='flex items-center justify-center mt-16 px-5 lg:mt-8 lg:pr-10'
-            />
+        <div className='lg:w-1/2 lg:h-full lg:px-4' ref={ref}>
+            <motion.div
+                initial={{ x: isRight? '50vw' : '-50vw' }}
+                animate={{ x: inView ? 0 : isRight? '50vw' : '-50vw' }}
+                transition={{ duration: 0.8, type: 'tween' }}
+            >
+                <Image 
+                    src={data.imageSrc}
+                    alt={data.altText}
+                    width={1000} height={800}
+                    className='flex items-center justify-center mt-16 px-5 lg:mt-8 lg:px-0'
+                />
+            </motion.div>
         </div>
     );
 };
 
-const TextParent: React.FC<ImageContainerProps> = ({ data }) => {  
+const TextParent: React.FC<ImageContainerProps> = ({ data, isRight }) => {
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+        threshold: 0.2,
+    });  
     return(
-        <div className='flex flex-col gap-2 ml-8 mr-14 mt-8 lg:w-1/2'>
-            <div className=''>
+        <div className='flex flex-col gap-2 ml-8 mr-14 mt-8 lg:mx-6 lg:w-1/2' ref={ref}>
+            <motion.div
+                initial={{ x: isRight? '-50vw' : '50vw' }}
+                animate={{ x: inView ? 0 : isRight? '-50vw' : '50vw' }}
+                transition={{ duration: 0.8, type: 'tween', delay: 0.15 }}
+            >
                 <h1 className='text-2xl lg:text-3xl lg:mx-10 font-bold'>{data.heading}</h1>
-            </div>
+            </motion.div>
 
-            <div className='text-sm lg:text-xl gap-x-2 mr-10 lg:mx-10 mt-2 tracking-wider'>
-                {data.content.map((paragraph, index) => (
-                    <p key={index}>{paragraph}</p>
-                ))}
-            </div>
+            <motion.div
+                initial={{ x: isRight? '-50vw' : '50vw' }}
+                animate={{ x: inView ? 0 : isRight? '-50vw' : '50vw' }}
+                transition={{ duration: 0.8, type: 'tween'}}
+            >
+                <div className='text-sm lg:text-base gap-x-2 mr-10 lg:mx-10 mt-2 tracking-wider'>
+                    {data.content.map((paragraph, index) => (
+                        <p className='mb-4' key={index}>{paragraph}</p>
+                    ))}
+                </div>
+            </motion.div>
+    
         </div>
     )
 };

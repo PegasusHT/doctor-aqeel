@@ -19,9 +19,10 @@ const About: React.FC = () => {
                     <h2 className='text-white text-6xl lg:text-8xl '>About</h2>
                 </div>
             </div>
-            {data.abtPageData.map((d, index) => (
-                <ImageContainer key={index} data={d} pos={index} />
-            ))}
+            {data.abtPageData.map((d, index) => {
+                const isRight = index % 2 !== 0;
+                return <ImageContainer key={index} data={d} isRight={isRight} />;
+            })}
         </div>
     );
 };
