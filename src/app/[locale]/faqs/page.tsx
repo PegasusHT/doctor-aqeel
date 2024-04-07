@@ -18,7 +18,7 @@ const FAQs: React.FC = () => {
                 </div>
             </div>
             <div className='flex items-center justify-center'>
-                <h1 className='text-2xl lg:text-4xl lg:mt-8 font-bold'> Frequently asked questions </h1>
+                <h1 className='text-2xl lg:text-4xl mt-8 font-bold'> Frequently asked questions </h1>
             </div>
 
             <p className='ml-3 mt-10 text-lg lg:text-xl font-semibold mb-2'> FAQs </p>
