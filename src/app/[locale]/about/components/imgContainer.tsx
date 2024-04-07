@@ -69,7 +69,7 @@ const ImageParent: React.FC<ImageContainerProps> = ({ data, isRight }) => {
 const TextParent: React.FC<ImageContainerProps> = ({ data, isRight }) => {
     const [ref, inView] = useInView({
         triggerOnce: true,
-        threshold: 0.2,
+        threshold: 0.1,
     });  
     return(
         <div className='flex flex-col gap-2 ml-8 mr-14 mt-8 lg:mx-6 lg:w-1/2' ref={ref}>

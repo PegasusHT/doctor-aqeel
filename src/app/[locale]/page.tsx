@@ -4,7 +4,9 @@ import Home from '../[locale]/Home/Home';
 const PageContent: React.FC = () => {
 
     return (
-        <Home />
+        <div className='overflow-x-hidden'>
+            <Home />
+        </div>
     );
 };
 
