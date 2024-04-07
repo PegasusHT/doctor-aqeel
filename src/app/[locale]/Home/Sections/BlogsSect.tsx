@@ -16,9 +16,20 @@ const BlogSection: React.FC = () => {
 
     return (
         <div className="flex flex-col items-center bg-gray-100" ref={ref}>
-            <h2 className="text-2xl lg:text-4xl font-bold mb-4 mt-10">Recent Blogs</h2>
-            <div className='lg:flex lg:flex-row'>
-    
+            <motion.div 
+                initial={{ x: '100vw' }}
+                animate={{ x: inView ? 0 : '100vw' }}
+                transition={{ duration: 1.1, type: 'tween' }}
+            >
+                <h2 className="text-2xl lg:text-4xl font-bold mb-4 mt-10">Recent Blogs</h2>
+            </motion.div>
+
+            <motion.div 
+                initial={{ x: '70vw' }}
+                animate={{ x: inView ? 0 : '70vw' }}
+                transition={{ duration: 1.1, type: 'tween', delay: 0.1}}
+            >
+                <div className='lg:flex lg:flex-row'>
                     {Blogs.map((blog, index) => (
                         <BlogContainer
                             key={index} blogId={blog.blogId}
@@ -28,7 +39,8 @@ const BlogSection: React.FC = () => {
                             content={blog.shortDes}
                         />
                     ))}
-            </div>
+                </div>
+            </motion.div>
 
             <motion.div
                 initial={{ x: '-100vw' }}
@@ -38,9 +50,7 @@ const BlogSection: React.FC = () => {
             >
                 <Link href={`/${localActive}/blog`}>
                     <button
-                        className="relative z-30 mt-8 mb-10 h-8 lg:h-12 lg:w-44 w-36 rounded-full text-white lg:text-xl font-semibold"
-                        style={{ backgroundColor: '#961b1e' }}
-                    >
+                        className="relative z-30 mt-8 mb-10 h-8 lg:h-12 lg:w-44 w-36 rounded-full text-white lg:text-xl font-semibold bg-red-800 border-white border-2 hover:bg-white hover:text-red-800 hover:border-red-800">
                         More Blogs
                     </button>
                 </Link>

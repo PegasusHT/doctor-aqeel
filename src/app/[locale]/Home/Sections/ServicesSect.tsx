@@ -8,7 +8,6 @@ import { useLocale } from 'next-intl';
 const ServicesSect: React.FC = () => {
     const [ref, inView] = useInView({
         triggerOnce: true,
-        threshold: 0.2,
     });
     const localActive = useLocale();
 
@@ -33,16 +32,35 @@ const ServicesSect: React.FC = () => {
     return (
         <div className='text-center'>
             <div className="bg-gray-200 flex flex-col lg:flex-row items-center lg:items-start gap-20 lg:gap-10 p-8" ref={ref}>
-                {imageData.map((data, index) => (
+            {imageData.map((data, index) => {
+                let initial, animate;
+                switch (index) {
+                    case 0: // left image
+                        initial = { x: '-50vw' };
+                        animate = { x: inView ? 0 : '-50vw' };
+                        break;
+                    case 1: // middle image
+                        initial = { y: '50vw' };
+                        animate = { y: inView ? 0 : '50vw' };
+                        break;
+                    case 2: // right image
+                        initial = { x: '50vw' };
+                        animate = { x: inView ? 0 : '50vw' };
+                        break;
+                    default:
+                        break;
+                }
+                return (
                     <motion.div
                         key={index}
-                        initial={{ x: '-100vw' }}
-                        animate={{ x: inView ? 0 : '-100vw' }}
+                        initial={initial}
+                        animate={animate}
                         transition={{ type: 'tween', duration: 1.2 }}
                     >
                         <ServiceImage data={data}/>
                     </motion.div>
-                ))}
+                );
+            })}
              
             </div>
             <motion.div
@@ -52,9 +70,7 @@ const ServicesSect: React.FC = () => {
             >
                 <Link href={`/${localActive}/services`}>
                     <button
-                        className='relative z-30 mt-1 mb-[-4rem] h-8 w-36 rounded-full text-white font-semibold'
-                        style={{ backgroundColor: '#961b1e' }}
-                    >
+                        className='relative z-30 mt-1 mb-[-4rem] h-8 w-36 rounded-full text-white font-semibold bg-red-800 border-white border-2 hover:bg-white hover:text-red-800 hover:border-red-800 '>
                         See Services
                     </button>
                 </Link>

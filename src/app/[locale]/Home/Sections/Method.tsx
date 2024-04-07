@@ -1,7 +1,5 @@
 import React from 'react';
 import ImageContainer from './components/imgContainer';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 
 const imageData = [
     {
@@ -31,21 +29,11 @@ const imageData = [
 ];
 
 const Method: React.FC = () => {
-    const [ref, inView] = useInView({
-        triggerOnce: true,
-        threshold: 0.2,
-        delay: 0.5,
-    });
 
     return (
-        <div className="flex flex-col mt-24 lg:mb-28 items-center gap-2" ref={ref}>
+        <div className="flex flex-col mt-24 lg:mb-28 items-center gap-2">
             <h2 className="text-xl lg:text-2xl font-semibold">Methodology</h2>
             <h1 className='text-2xl lg:text-3xl font-bold'>This is conducted through:</h1>
-            <motion.div
-                initial={{ x: '-100vw' }}
-                animate={{ x: inView ? 0 : '-100vw' }}
-                transition={{ duration: 1, type: 'tween' }}
-            >
                 <div className="flex flex-col my-10 px-5 gap-14 lg:mt-40 ">
                     {imageData.map((data, index) => {
                         const pos = index % 2 === 0 ? 'right' : 'left';
@@ -62,7 +50,6 @@ const Method: React.FC = () => {
                         );
                     })}
                 </div>
-            </motion.div>
         </div>
     );
 };

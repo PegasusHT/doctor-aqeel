@@ -14,7 +14,7 @@ interface BlogContainerProps {
 const BlogContainer: React.FC<BlogContainerProps> = ({ title, date, content, imageUrl, blogId }) => {
 
     return (
-        <div className='p-5 lg:w-6/12'>
+        <div className='p-5 lg:w-6/12 '>
             <div className="bg-white rounded mb-10 gap-2 border-[1px] border-black relative pb-16 ">
                 <div className='w-full mb-4 h-full relative overflow-hidden'>
                     <Image

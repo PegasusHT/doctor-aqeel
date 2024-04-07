@@ -1,6 +1,7 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
 
 interface TitleDescProps {
     title: string;
@@ -31,8 +32,18 @@ const ServiceContainer: React.FC<ServiceContainerProps> = ({
     desc,
     isRight
 }) => {
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+        threshold: 0.2,
+    });
+
     return (
-        <div className='flex-none lg:w-1/2 flex items-center flex-col lg:items-start lg:flex-row p-5 lg:px-0'>
+        <motion.div
+            initial={{ x: isRight ? '25vw' : '-25vw', opacity: 0 }}
+            animate={{ x: inView ? 0 : isRight ? '25vw' : '-25vw', opacity: inView ? 1 : 0 }}
+            transition={{ duration: 0.8, type: 'tween' }}
+            className='flex-none lg:w-1/2 flex items-center flex-col lg:items-start lg:flex-row p-5 lg:px-0' ref={ref}
+        >
             <div className='lg:hidden text-center'>
                 <Image src={imageUrl} alt={altText} width={400} height={300} />
                 <div className='px-5'> 
@@ -66,7 +77,7 @@ const ServiceContainer: React.FC<ServiceContainerProps> = ({
                     <TitleDesc title={title} desc={desc} />
                 </div>
             )}
-        </div>
+        </motion.div>
     );
 };
 
