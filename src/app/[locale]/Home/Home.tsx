@@ -28,7 +28,7 @@ const Home: React.FC = () => {
                     <motion.div
                         initial={{ opacity: 0, x: '-100vw' }}
                         animate={{ opacity: inView ? 1 : 0, x: 0 }}
-                        transition={{ type: 'tween', duration: 0.6 }}
+                        transition={{ type: 'tween', duration: 1 }}
                     >
                         <h1 className='text-3xl lg:text-6xl mt-28 lg:mt-16 font-bold'>
                             <div className='flex flex-row items-center justify-center'>

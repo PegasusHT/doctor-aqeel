@@ -53,7 +53,7 @@ const ImageParent: React.FC<ImageContainerProps> = ({ data, isRight }) => {
             <motion.div
                 initial={{ x: isRight? '50vw' : '-50vw' }}
                 animate={{ x: inView ? 0 : isRight? '50vw' : '-50vw' }}
-                transition={{ duration: 0.6, type: 'tween' }}
+                transition={{ duration: 1, type: 'tween' }}
             >
                 <Image 
                     src={data.imageSrc}
@@ -76,7 +76,7 @@ const TextParent: React.FC<ImageContainerProps> = ({ data, isRight }) => {
             <motion.div
                 initial={{ x: isRight? '-50vw' : '50vw' }}
                 animate={{ x: inView ? 0 : isRight? '-50vw' : '50vw' }}
-                transition={{ duration: 0.6, type: 'tween', delay: 0.15 }}
+                transition={{ duration: 0.7, type: 'tween'}}
             >
                 <h1 className='text-2xl lg:text-3xl lg:mx-10 font-bold'>{data.heading}</h1>
             </motion.div>
@@ -84,7 +84,7 @@ const TextParent: React.FC<ImageContainerProps> = ({ data, isRight }) => {
             <motion.div
                 initial={{ x: isRight? '-50vw' : '50vw' }}
                 animate={{ x: inView ? 0 : isRight? '-50vw' : '50vw' }}
-                transition={{ duration: 0.6, type: 'tween'}}
+                transition={{ duration: 1, type: 'tween'}}
             >
                 <div className='text-sm lg:text-base gap-x-2 mr-10 lg:mx-10 mt-2 tracking-wider'>
                     {data.content.map((paragraph, index) => (
