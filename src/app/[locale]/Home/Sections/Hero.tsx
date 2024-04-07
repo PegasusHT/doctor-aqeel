@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
                 <motion.div
                     initial={{ x: '-100vw', opacity: 0 }}
                     animate={{ x: inView ? 0 : '-100vw', opacity: inView ? 1 : 0 }}
-                    transition={{ type: 'tween', duration: 1.2 }}
+                    transition={{ type: 'tween', duration: 0.6 }}
                     className='lg:flex-none lg:w-1/2 lg:pl-5 '
                 >
                     <Image src={'https://dr-aqeel.com/wp-content/uploads/2024/01/dr_aqeel-1.png'} alt="Portrait" width={2400} height={1000} />
@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
                     <motion.div
                         initial={{ x: '100vw', opacity: 0 }}
                         animate={{ x: inView ? 0 : '100vw', opacity: inView ? 1 : 0 }}
-                        transition={{ type: 'tween', duration: 1.15 }}
+                        transition={{ type: 'tween', duration: 0.6 }}
                     >
                         <div className="">
                             <h1 className="text-2xl font-bold">About</h1>
@@ -37,14 +37,14 @@ const Hero: React.FC = () => {
                     <motion.div
                         initial={{ x: '100vw', opacity: 0 }}
                         animate={{ x: inView ? 0 : '100vw', opacity: inView ? 1 : 0 }}
-                        transition={{ type: 'tween', duration: 1.18 }}
+                        transition={{ type: 'tween', duration: 0.6 }}
                     >
                         <h2 className="text-lg lg:text-3xl lg:font-bold lg:py-2">Dr Aqeel Farooque</h2>
                     </motion.div>
                     <motion.div
                         initial={{ x: '100vw', opacity: 0 }}
                         animate={{ x: inView ? 0 : '100vw', opacity: inView ? 1 : 0 }}
-                        transition={{ type: 'tween', duration: 1.21 }}
+                        transition={{ type: 'tween', duration: 0.6 }}
                     >
                         <div className="lg:pr-7">
                             <p className="mr-10 text-lg lg:text-xl" style={{ color: '#2c2c74' }}>
@@ -63,7 +63,7 @@ const Hero: React.FC = () => {
                     <motion.div
                         initial={{ x: '100vw', opacity: 0 }}
                         animate={{ x: inView ? 0 : '100vw', opacity: inView ? 1 : 0 }}
-                        transition={{ type: 'tween', duration: 1.2, delay: 0.2 }}
+                        transition={{ type: 'tween', duration: 0.6, delay: 0.2 }}
                     >
                         <div className="mb-8 mt-3">
                             <Link href="/en/about">

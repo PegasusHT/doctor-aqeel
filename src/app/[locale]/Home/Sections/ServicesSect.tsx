@@ -55,7 +55,7 @@ const ServicesSect: React.FC = () => {
                         key={index}
                         initial={initial}
                         animate={animate}
-                        transition={{ type: 'tween', duration: 1.2 }}
+                        transition={{ type: 'tween', duration: 0.7 }}
                     >
                         <ServiceImage data={data}/>
                     </motion.div>
@@ -66,7 +66,7 @@ const ServicesSect: React.FC = () => {
             <motion.div
                 initial={{ x: '-100vw' }}
                 animate={{ x: inView ? 0 : '-100vw' }}
-                transition={{ type: 'tween', duration: 1.2 }}
+                transition={{ type: 'tween', duration: 0.7 }}
             >
                 <Link href={`/${localActive}/services`}>
                     <button

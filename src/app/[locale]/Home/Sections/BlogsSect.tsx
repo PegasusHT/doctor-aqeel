@@ -19,7 +19,7 @@ const BlogSection: React.FC = () => {
             <motion.div 
                 initial={{ x: '100vw' }}
                 animate={{ x: inView ? 0 : '100vw' }}
-                transition={{ duration: 1.1, type: 'tween' }}
+                transition={{ duration: 0.6, type: 'tween' }}
             >
                 <h2 className="text-2xl lg:text-4xl font-bold mb-4 mt-10">Recent Blogs</h2>
             </motion.div>
@@ -27,7 +27,7 @@ const BlogSection: React.FC = () => {
             <motion.div 
                 initial={{ x: '70vw' }}
                 animate={{ x: inView ? 0 : '70vw' }}
-                transition={{ duration: 1.1, type: 'tween', delay: 0.1}}
+                transition={{ duration: 0.6, type: 'tween', delay: 0.1}}
             >
                 <div className='lg:flex lg:flex-row'>
                     {Blogs.map((blog, index) => (
@@ -45,7 +45,7 @@ const BlogSection: React.FC = () => {
             <motion.div
                 initial={{ x: '-100vw' }}
                 animate={{ x: inView ? 0 : '-100vw' }}
-                transition={{ duration: 1, type: 'tween' }}
+                transition={{ duration: 0.6, type: 'tween' }}
                 ref={ref}
             >
                 <Link href={`/${localActive}/blog`}>
