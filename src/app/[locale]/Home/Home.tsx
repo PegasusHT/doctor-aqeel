@@ -20,7 +20,8 @@ const Home: React.FC = () => {
     return (
         <div ref={ref}>
             <div className="relative flex justify-center h-[28rem] overflow-hidden text-center">
-                <video autoPlay loop muted playsInline className="absolute w-screen md:h-4/5 transform min-w-full max-h-full h-full scale-150 object-cover">
+                <video key={Date.now()}  
+                 autoPlay loop muted playsInline className="absolute w-screen md:h-4/5 transform min-w-full max-h-full h-full scale-150 object-cover">
                     <source src={'home.mp4'} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
