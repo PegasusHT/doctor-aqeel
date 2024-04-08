@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import Image from 'next/image'; 
+import {useTranslations} from 'next-intl';
 
 interface ImageContainerProps {
     data: {
@@ -71,6 +72,8 @@ const TextParent: React.FC<ImageContainerProps> = ({ data, isRight }) => {
         triggerOnce: true,
         threshold: 0.1,
     });  
+    const t = useTranslations('About');
+
     return(
         <div className='flex flex-col gap-2 ml-8 mr-14 mt-8 lg:mx-6 lg:w-1/2' ref={ref}>
             <motion.div
@@ -78,7 +81,7 @@ const TextParent: React.FC<ImageContainerProps> = ({ data, isRight }) => {
                 animate={{ x: inView ? 0 : isRight? '-50vw' : '50vw' }}
                 transition={{ duration: 0.7, type: 'tween'}}
             >
-                <h1 className='text-2xl lg:text-3xl lg:mx-10 font-bold'>{data.heading}</h1>
+                <h1 className='text-2xl lg:text-3xl lg:mx-10 font-bold'>{t(data.heading)}</h1>
             </motion.div>
 
             <motion.div
@@ -88,7 +91,7 @@ const TextParent: React.FC<ImageContainerProps> = ({ data, isRight }) => {
             >
                 <div className='text-sm lg:text-base gap-x-2 mr-10 lg:mx-10 mt-2 tracking-wider'>
                     {data.content.map((paragraph, index) => (
-                        <p className='mb-4' key={index}>{paragraph}</p>
+                        <p className='mb-4' key={index}>{t(paragraph)}</p>
                     ))}
                 </div>
             </motion.div>

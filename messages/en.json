@@ -15,8 +15,16 @@
 
   "About": {
     "title": "About",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "getStarted": "Get Started"
+    "The Full Story": "The Full Story",
+    "heading1": "A Bit About Your Doctor",
+    "content1-1": "Dr Aqeel Farooque is a highly qualified and experienced Pediatric Endocrinologist who is passionate about helping children with endocrine-related health issues. He is currently the head of the Diabetes & Endocrinology Unit at Al Qassimi Women’s & Children’s Hospital, Sharjah. This is a tertiary referral center providing care for children of the Northern Emirates, with complex endocrine-related health issues.",
+    "content1-2": "He also serves Adjunct Clinical Professor at the College of Medicine, University of Sharjah, and is passionate about teaching medical students and post-graduate students in the MSc in Diabetes Management course."
+    ,
+    "heading2": "His Journey in Medicine",
+    "content2-1":"His journey in medicine began with an MBBS degree from Bangalore, India. Later he pursued pediatrics and pediatric endocrinology training in the United Kingdom and worked as a consultant pediatric endocrinologist in both the UK and Saudi Arabia before moving to the UAE in 2017.",
+    "content2-2":"He is affiliated with several national and international pediatric endocrinology societies, including DPEC, EPEC, ASPED, BSPED and ESPE, which reflects his dedication to staying up-to-date with the latest research and advancements in the field.",
+    "content2-3":"He is fluent in three languages, including English, Arabic, and Urdu, which allows him to effectively communicate with a diverse range of patients and families from diverse backgrounds."
+    
   },
   
   "HomeMain": {

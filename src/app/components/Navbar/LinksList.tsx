@@ -18,7 +18,6 @@ const socialLinks = [
     { name: 'Youtube', url: links[4], icon: <FaYoutube /> },
 ];
 
-
 const LinkList: React.FC<{ position: string }> = ({ position }) => (
     <ul className={`flex gap-3 ${position === 'head' ? 'hidden md:flex' : ''}`}>
         {socialLinks.map((link, index) => (

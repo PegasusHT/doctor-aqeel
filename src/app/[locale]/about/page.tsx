@@ -2,8 +2,10 @@ import React from 'react';
 import data from '../../../data/aboutPageData.json';
 import ImageContainer from './components/imgContainer';
 import Image from 'next/image';
+import {useTranslations} from 'next-intl';
 
 const About: React.FC = () => {
+    const t = useTranslations('About');
 
     return (
         <div className='mb-14' >
@@ -15,8 +17,8 @@ const About: React.FC = () => {
                     className="absolute inset-0 w-full object-cover h-full"
                 />
                 <div className="relative z-10 flex flex-col justify-center items-center text-white text-lg lg:text-2xl font-bold">
-                    The Full Story 
-                    <h2 className='text-white text-6xl lg:text-8xl '>About</h2>
+                    {t('The Full Story')}
+                    <h2 className='text-white text-6xl lg:text-8xl '>{t('title')}</h2>
                 </div>
             </div>
             {data.abtPageData.map((d, index) => {
