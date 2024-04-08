@@ -5,19 +5,34 @@ import { usePathname, useRouter } from 'next/navigation';
 import { ChangeEvent, useTransition } from 'react';
 import { useLocale } from 'next-intl';
 import Link from 'next/link';
+import { homedir } from 'os';
+
+type SectionMapping = {
+    [key: string]: string;
+};
 
 const Nav = ({ sections }: { sections: string[] }) => {
     const [isPending, startTransition] = useTransition();
     const router = useRouter();
     const localActive = useLocale();
     const pathname = usePathname();
-    
+
     const handleLanguageChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         const selectedLanguage = event.target.value;
+        const pathNameArr = pathname.split('/');
+        const filteredPathname = pathNameArr.length === 2 ? '' : pathNameArr[2];
         startTransition(() => {
-            router.replace(`/${selectedLanguage}`);
+            router.replace(`/${selectedLanguage}/${filteredPathname}`);
         });
-    }
+    };
+
+    const sectionMapping: SectionMapping = {
+        'حول': 'about',
+        "اتصل بنا": 'contact',
+        'الخدمات': 'services',
+        'المدونة': 'blog',
+        'الأسئلة الشائعة': 'faqs',
+    };
 
     return (
         <div className='gap-4 lg:flex lg:justify-start mt-4'>
@@ -27,12 +42,22 @@ const Nav = ({ sections }: { sections: string[] }) => {
                         let expectedPathname;
                         let linkHref;
 
-                        if (section === 'Home') {
-                            expectedPathname = `/${localActive}`;
-                            linkHref = `/${localActive}`;
+                        if (localActive === 'en') {
+                            if (section === 'Home') {
+                                expectedPathname = `/${localActive}`;
+                                linkHref = `/${localActive}`;
+                            } else {
+                                expectedPathname = `/${localActive}/${section.toLowerCase()}`;
+                                linkHref = `/${localActive}/${section.toLowerCase()}`;
+                            }
                         } else {
-                            expectedPathname = `/${localActive}/${section.toLowerCase()}`;
-                            linkHref = `/${localActive}/${section.toLowerCase()}`;
+                            if (section === 'الصفحة الرئيسية') {
+                                expectedPathname = `/${localActive}`;
+                                linkHref = `/${localActive}`;
+                            } else {
+                                expectedPathname = `/${localActive}/${sectionMapping[section.toLowerCase()]}`;
+                                linkHref = `/${localActive}/${sectionMapping[section.toLowerCase()]}`;
+                            }
                         }
 
                         const isActive = pathname === expectedPathname;
