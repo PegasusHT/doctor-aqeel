@@ -14,8 +14,8 @@ const Hero: React.FC = () => {
     const translations = useTranslations('HomeHero');
 
     return (
-        <div className="" >
-            <div className='w-full my-5 lg:flex lg:flex-row' ref={ref}>
+        <div className="lg:flex lg:flex-col lg:justify-center lg:items-center" >
+            <div className='w-full my-5 lg:flex lg:flex-row lg:justify-center lg:w-[67rem]' ref={ref}>
                 <motion.div
                     initial={{ x: '-100vw', opacity: 0 }}
                     animate={{ x: inView ? 0 : '-100vw', opacity: inView ? 1 : 0 }}

@@ -18,8 +18,8 @@ interface ImageContainerProps {
 const ImageContainer: React.FC<ImageContainerProps> = ({ data, isRight}) => {
     
     return (
-        <div className=''>
-            <div className='lg:flex flex-row hidden w-screen mt-12'>
+        <div className='lg:flex lg:flex-row lg:justify-center'>
+            <div className='lg:flex flex-row hidden w-screen lg:w-[62rem] mt-12'>
                 {isRight? 
                     <TextParent data={data} isRight={isRight} /> 
                     :

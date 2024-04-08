@@ -42,7 +42,7 @@ const MessageForm = () => {
     const t = useTranslations('ContactPage');
 
     return (
-        <form onSubmit={handleSubmit} className="max-w-md mr-5 lg:ml-10 mt-8 text-sm">
+        <form onSubmit={handleSubmit} className="max-w-md mr-5 lg:ml-10 mt-8 lg:w-5/12 text-sm lg:text-base">
             <div className="mb-4">
                 <label htmlFor="name" className="">
                     {t('your name')}
