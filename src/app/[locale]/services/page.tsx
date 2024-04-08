@@ -5,11 +5,13 @@ import ServiceContainer from './components/serviceContainers';
 import ConductedThroughDiv from './components/ConductedThroughDiv';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
+import {useTranslations} from 'next-intl';
 
 const Services: React.FC = () => {
     const [ref, inView] = useInView({
         triggerOnce: true,
     });
+    const t = useTranslations('ServicesPage');
 
     return (
         <div className='mb-14' ref={ref}>
@@ -20,14 +22,14 @@ const Services: React.FC = () => {
                     transition={{ type: 'tween', duration: 0.8 }}
                     className='text-2xl lg:text-6xl font-bold lg:mb-3'
                 >
-                    Clinical Services
+                    {t('title')}
                 </motion.h1>
                 <motion.p
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
                     transition={{ type: 'tween', duration: 0.8 }}
                 >
-                    <p className='text-xs lg:text-xl'>Healthy hormones, happy kids: compassionate and holistic care</p>
+                    <p className='text-xs lg:text-xl'>{t('intro')}</p>
                 </motion.p>
             </div>
 

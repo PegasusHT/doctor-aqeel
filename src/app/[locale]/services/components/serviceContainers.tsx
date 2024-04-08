@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
+import {useTranslations} from 'next-intl';
 
 interface TitleDescProps {
     title: string;
@@ -9,10 +10,12 @@ interface TitleDescProps {
 }
 
 const TitleDesc: React.FC<TitleDescProps> = ({ title, desc }) => {
+    const t = useTranslations('ServicesData');
+
     return (
         <div className='text-center px-5'>
-            <h1 className="text-2xl font-bold mb-3">{title}</h1>
-            <p className='mb-7 text-lg'>{desc}</p>
+            <h1 className="text-2xl font-bold mb-3">{t(title)}</h1>
+            <p className='mb-7 text-lg'>{t(desc)}</p>
         </div>
     );
 };
@@ -36,6 +39,7 @@ const ServiceContainer: React.FC<ServiceContainerProps> = ({
         triggerOnce: true,
         threshold: 0.2,
     });
+    const t = useTranslations('ServicesData');
 
     return (
         <motion.div
@@ -47,8 +51,8 @@ const ServiceContainer: React.FC<ServiceContainerProps> = ({
             <div className='lg:hidden text-center'>
                 <Image src={imageUrl} alt={altText} width={400} height={300} />
                 <div className='px-5'> 
-                    <h1 className="text-lg font-bold mt-5">{title}</h1>
-                    <p className='mb-7 mt-2'>{desc}</p>
+                    <h1 className="text-lg font-bold mt-5">{t(title)}</h1>
+                    <p className='mb-7 mt-2'>{t(desc)}</p>
                 </div>
             </div>
             {isRight ? (

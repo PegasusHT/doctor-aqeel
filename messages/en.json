@@ -76,13 +76,41 @@
     ],
     "Read More": "Read More"
   },
+
   "ServicesData": {
     "title": "Services",
     "description": "His clinical expertise lies in pediatric diabetes & endocrinology, and he provides consultations for a wide range of endocrine-related health problems in children, including type 1, 2, and rare types of diabetes, as well as issues related to growth, puberty, thyroid, adrenal, pituitary, sex development, calcium, and metabolic bone disorders. He also works with children who have genetic abnormalities that may cause endocrine problems.",
     "See Services": "See Services",
+
     "Diabetes Management": "Diabetes Management",
+    "Diabetes Management-Description": "Dr Aqeel provides care for Type 1, Type 2, and genetically-induced diabetes. He uses advanced technologies such as insulin pumps and continuous glucose monitors to enhance patients’ lives.",
     "Growth Disorders": "Growth Disorders",
-    "Puberty Disorders": "Puberty Disorders"
+    "Growth Disorders-Description": "Diagnosis and treatment of growth disorders, including short stature. He will recommend appropriate tests and treatment options, including growth hormone replacement therapy if necessary.",
+    "Puberty Problems": "Puberty Problems",
+    "Puberty Problems-Description": "He handles early, delayed, and puberty-like disorders with sensitivity and years of experience.",
+    "Tricky Thyroid": "Tricky Thyroid",
+    "Tricky Thyroid-Description": "Dr Aqeel treats conditions such as congenital and acquired hypothyroidism, hyperthyroidism, and goiter, among others.",
+    "Vitamin D, Calcium, and Bones": "Vitamin D, Calcium, and Bones",
+    "Vitamin D, Calcium, and Bones-Description": "He has experience in caring for children with vitamin D, calcium, parathyroid gland, and skeletal system disorders like rickets, bowed legs, easy fractures and soft bones",
+    "Adrenals and Sex Development": "Adrenals and Sex Development",
+    "Adrenals and Sex Development-Description": "Dr Aqeel manages steroid, adrenal, and sex hormone imbalances that affect children’s general health or cause ambiguity in their sex.",
+    "Complex Genetic-Endocrine Conditions": "Complex Genetic-Endocrine Conditions",
+    "Complex Genetic-Endocrine Conditions-Description": "He has experience in diagnosing and managing complex endocrine disorders related to genetic conditions that affect different organ systems.",
+    "Obesity": "Obesity",
+    "Obesity-Description": "Dr Aqeel provides compassionate and empathetic care for children struggling with weight issues. He will offer practical advice and potential medical treatments with realistic expectations are discussed.",
+
+    "ConductedThrough": "This is conducted through:",
+    "Consultations": "Consultations",
+    "Consultations-Description": "Dr Aqeel will review the child’s medical history, perform a physical exam, and order any necessary lab tests or imaging studies.",
+    "Testing": "Testing",
+    "Testing-Description": "These tests may include blood tests, imaging studies (such as X-rays, Ultrasound, MRI, etc.), and hormone stimulation tests.",
+    "Treatment": "Treatment",
+    "Treatment-Description":"Once a diagnosis has been made, Dr Aqeel will work with the child and their family to develop a treatment plan. Treatment may include medications, hormone replacement therapy, lifestyle changes, or surgery in some cases.",
+    "Holistic Support": "Holistic Support",
+    "Holistic Support-Description": "Dr Aqeel will review the child’s medical history, perform a physical exam, and order any necessary lab tests or imaging studies."
+  },
+  "ServicesPage": {
+    "title": "Clinical Services",
+    "intro": "Healthy hormones, happy kids: compassionate and holistic care"
   }
- 
 }

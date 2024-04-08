@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import ConductedThrough from './ConductedThrough';
+import {useTranslations} from 'next-intl';
 
 interface ConductedThroughDivProps {
     data: {
@@ -19,6 +20,7 @@ const ConductedThroughDiv: React.FC<ConductedThroughDivProps> = ({ data }) => {
         triggerOnce: true,
         threshold: 0.2,
     });
+    const t = useTranslations('ServicesData');
 
     return (
         <div className='flex flex-col items-center justify-center mt-12 lg:mt-2 ml-1 gap-3 h-30 mb-14' ref={ref}>
@@ -27,7 +29,7 @@ const ConductedThroughDiv: React.FC<ConductedThroughDivProps> = ({ data }) => {
                 animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -50 }}
                 transition={{ type: 'tween', duration: 0.8 }}
                 className='text-2xl lg:text-4xl font-bold text-center lg:mt-12'>
-                This is conducted through:
+               { t('ConductedThrough')}
             </motion.h1>
             <motion.div
                 initial={{ y: '40vh', opacity: 0 }}
