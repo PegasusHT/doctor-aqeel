@@ -20,7 +20,7 @@ const Nav = ({ sections }: { sections: string[] }) => {
     const handleLanguageChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         const selectedLanguage = event.target.value;
         const pathNameArr = pathname.split('/');
-        const filteredPathname = pathNameArr.length === 2 ? '' : pathNameArr[2];
+        const filteredPathname = pathNameArr.slice(2).join('/');
         startTransition(() => {
             router.replace(`/${selectedLanguage}/${filteredPathname}`);
         });
