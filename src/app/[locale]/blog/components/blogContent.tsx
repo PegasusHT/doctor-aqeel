@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { SocialIcon } from 'react-social-icons'
+import {useTranslations} from 'next-intl';
 
 interface BlogContainerProps {
     title: string;
@@ -14,6 +15,7 @@ interface BlogContainerProps {
 }
 
 const BlogContent: React.FC<BlogContainerProps> = ({ title, date, author, fullDesc, imageUrl }) => {
+    const t = useTranslations('BlogData');
 
     const pathname = usePathname();
     const blogUrl = `${process.env.NEXT_PUBLIC_SITE_URL}${pathname}`;
@@ -30,10 +32,10 @@ const BlogContent: React.FC<BlogContainerProps> = ({ title, date, author, fullDe
             <h3 className=" mb-2 text-3xl lg:text-4xl text-black font-semibold">{title}</h3>
             <div className='flex flex-row gap-1 text-sm lg:text-lg' style={{color:'#046bd2'}}>
                 <p className=''>
-                    By {author}  
+                    {t('By')} {author}  
                 </p>
                 <p> / </p>
-                <p className="">{date}</p>
+                <p className="">{t(date)}</p>
             </div>
             <div className='w-full flex justify-center lg:justify-start mt-5 mb-5'>
                 <Image
@@ -45,7 +47,7 @@ const BlogContent: React.FC<BlogContainerProps> = ({ title, date, author, fullDe
             <div className='gap-2 lg:mt-6 '>
                 {
                     fullDesc.map((desc: string, index: number) => (
-                        <p key={index} className="mb-4 text-sm lg:text-lg lg:tracking-wide ">{desc}</p>
+                        <p key={index} className="mb-4 text-sm lg:text-lg lg:tracking-wide ">{t(desc)}</p>
                     ))
                 }
             </div>

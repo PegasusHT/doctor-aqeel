@@ -60,6 +60,10 @@
     "Read More": "Read More"
   },
 
+  "BlogPage": {
+    "title": "Blog"
+
+  },
   "BlogData": {
     "Title": "Which Growth Hormone is best for my child’s growth?",
     "date1": "January 3, 2024",
@@ -67,14 +71,17 @@
     "date2": "January 2, 2024",
     "date3": "January 1, 2024",
     "shortDes": "If your pediatric endocrinologist feels that your child needs growth hormone injections to achieve optimal height, they may have already suggested a few different options of growth hormone pens or...",
-    "fullDesc": [
-        "If your pediatric endocrinologist feels that your child needs growth hormone injections to achieve optimal height, they may have already suggested a few different options of growth hormone pens or devices. And perhaps, you maybe reading this to help decide “the best” growth hormone. The one that has the maximum benefit and least side effect of all makes in the market.",
-        "Look no further, because I have the answer you …. its ALL THE SAME! All the growth hormone use recombinant DNA (rDNA) technology, a well tried, tested and widely used method to produce many medicines from hormones to antibiotics and blood products. They all undergo a purification and testing process to make sure they are well within WHO standards.",
-        "The daily growth hormone is the traditional one, that has been tested over the past few decades to be very safe when used according to the doctor’s recommendations for dosage and storage.",
-        "Over the last year, we now have access to newer weekly growth hormones, that use tried and tested biotechnologies to make its effect last a week.",
-        "So here is a quick answer: the best growth hormone for you and your child is the one you can afford throughout the duration of the treatment (generally many years), the one you can remember to give everyday, and the one that is easily available."
-    ],
-    "Read More": "Read More"
+    "fullDesc1": "If your pediatric endocrinologist feels that your child needs growth hormone injections to achieve optimal height, they may have already suggested a few different options of growth hormone pens or devices. And perhaps, you maybe reading this to help decide “the best” growth hormone. The one that has the maximum benefit and least side effect of all makes in the market.",
+    "fullDesc2": "Look no further, because I have the answer you …. its ALL THE SAME! All the growth hormone use recombinant DNA (rDNA) technology, a well tried, tested and widely used method to produce many medicines from hormones to antibiotics and blood products. They all undergo a purification and testing process to make sure they are well within WHO standards.",
+    "fullDesc3": "The daily growth hormone is the traditional one, that has been tested over the past few decades to be very safe when used according to the doctor’s recommendations for dosage and storage.",
+    "fullDesc4": "Over the last year, we now have access to newer weekly growth hormones, that use tried and tested biotechnologies to make its effect last a week.",
+    "fullDesc5": "So here is a quick answer: the best growth hormone for you and your child is the one you can afford throughout the duration of the treatment (generally many years), the one you can remember to give everyday, and the one that is easily available.",
+    "Read More": "Read More",
+
+    "By": "By ",
+    "Share Post": "Share Post",
+    "Previous Post": "Previous Post",
+    "Next Post": "Next Post"
   },
 
   "ServicesData": {
@@ -113,4 +120,6 @@
     "title": "Clinical Services",
     "intro": "Healthy hormones, happy kids: compassionate and holistic care"
   }
+
+
 }
