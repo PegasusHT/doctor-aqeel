@@ -47,12 +47,12 @@ const Hero: React.FC = () => {
                         animate={{ x: inView ? 0 : '100vw', opacity: inView ? 1 : 0 }}
                         transition={{ type: 'tween', duration: 1.21 }}
                     >
-                        <div className="lg:pr-7">
+                        <div className="">
                             <p className="mr-10 text-lg lg:text-xl" style={{ color: '#2c2c74' }}>
                                 {translations('Description')}
                             </p>
                         </div>
-                        <div className="text-sm lg:text-lg gap-x-2 mr-10 mt-2 tracking-wide">
+                        <div className="text-sm lg:text-lg gap-x-2 mr-10 lg:mr-0 mt-2 tracking-wide">
                             <p className="">
                                 {translations('Intro-p1')}
                             </p>
