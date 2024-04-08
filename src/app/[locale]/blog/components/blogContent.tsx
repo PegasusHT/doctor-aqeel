@@ -29,7 +29,7 @@ const BlogContent: React.FC<BlogContainerProps> = ({ title, date, author, fullDe
 
     return (
         <div className="bg-gray-100 mb-4 py-4 mx-2 px-3 lg:p-14">
-            <h3 className=" mb-2 text-3xl lg:text-4xl text-black font-semibold">{title}</h3>
+            <h3 className=" mb-2 text-3xl lg:text-4xl text-black font-semibold">{t(title)}</h3>
             <div className='flex flex-row gap-1 text-sm lg:text-lg' style={{color:'#046bd2'}}>
                 <p className=''>
                     {t('By')} {author}  
