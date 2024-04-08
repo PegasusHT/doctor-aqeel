@@ -2,8 +2,10 @@ import React from 'react';
 import QuestionContainer from './components/questionComp';
 import FaqData  from '../../../data/faqsData.json';
 import Image from 'next/image'; 
+import {useTranslations} from 'next-intl';
 
 const FAQs: React.FC = () => {
+    const t = useTranslations('FAQsPage');
 
     return (
         <div className='mb-14 mt-5' >
@@ -14,14 +16,14 @@ const FAQs: React.FC = () => {
                     </div>
                 </div>
                 <div className="relative z-10 flex flex-col justify-center items-center text-white text-lg lg:text-2xl font-bold">
-                    <h2 className='text-6xl lg:text-7xl' >FAQs</h2>
+                    <h2 className='text-6xl lg:text-7xl' >{t('title')}</h2>
                 </div>
             </div>
             <div className='flex items-center justify-center'>
-                <h1 className='text-2xl lg:text-4xl mt-8 font-bold'> Frequently asked questions </h1>
+                <h1 className='text-2xl lg:text-4xl mt-8 font-bold'> {t('frequently asked questions')} </h1>
             </div>
 
-            <p className='ml-3 mt-10 text-lg lg:text-xl font-semibold mb-2'> FAQs </p>
+            <p className='ml-3 mt-10 text-lg lg:text-xl font-semibold mb-2'> {t('title')} </p>
 
             {
                 FaqData.map((faq, index) => (
