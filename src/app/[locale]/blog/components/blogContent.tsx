@@ -44,7 +44,7 @@ const BlogContent: React.FC<BlogContainerProps> = ({ title, date, author, fullDe
                     width={800} height={600}
                 />
             </div>
-            <div className='gap-2 lg:mt-20 '>
+            <div className='gap-2 lg:mt-16 '>
                 {
                     fullDesc.map((desc: string, index: number) => (
                         <p key={index} className="mb-4 text-sm lg:text-lg lg:tracking-wide ">{t(desc)}</p>
