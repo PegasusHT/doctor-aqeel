@@ -154,5 +154,13 @@
     "your message": "Your Message (optional)",
     "submit": "Submit",
     "thank you": "Thank you for your message. It has been sent."
+  },
+
+  "Footer":{
+    "Contact Me": "Contact Me",
+    "Dubai & Sharjah": "Dubai & Sharjah",
+    "subcribe": "Subscribe to Get My Newsletter",
+    "submit": "Submit",
+    "copyright": " 2023 by Dr. Aqeel Farooque. All rights reserved."
   }
 }

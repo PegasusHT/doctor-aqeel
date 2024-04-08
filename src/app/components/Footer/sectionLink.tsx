@@ -4,10 +4,21 @@ import Link from 'next/link';
 import { useLocale } from 'next-intl';
 import { usePathname } from 'next/navigation';
 
+type SectionMapping = {
+    [key: string]: string;
+};
+
 const SectionLink = ({ sections }: { sections: string[] }) => {
 
     const localActive = useLocale();
     const pathname = usePathname();
+
+    const sectionMapping: SectionMapping = {
+        'حول': 'about',
+        "اتصل بنا": 'contact',
+        'الخدمات': 'services',
+        'الأسئلة الشائعة': 'faqs',
+    };
 
     return (
         <>
@@ -15,10 +26,14 @@ const SectionLink = ({ sections }: { sections: string[] }) => {
                 let expectedPathname;
                 let linkHref;
 
-                linkHref = `/${localActive}/${section.toLowerCase()}`;
-
-                expectedPathname = `/${localActive}/${section.toLowerCase()}`;
-                linkHref = `/${localActive}/${section.toLowerCase()}`;
+                if(localActive === 'en') {
+                    expectedPathname = `/${localActive}/${section.toLowerCase()}`;
+                    linkHref = `/${localActive}/${section.toLowerCase()}`;
+                }
+                else {
+                    expectedPathname = `/${localActive}/${sectionMapping[section.toLowerCase()]}`;
+                    linkHref = `/${localActive}/${sectionMapping[section.toLowerCase()]}`;
+                }
 
                 const isActive = pathname === expectedPathname;
 

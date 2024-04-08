@@ -5,7 +5,6 @@ import { usePathname, useRouter } from 'next/navigation';
 import { ChangeEvent, useTransition } from 'react';
 import { useLocale } from 'next-intl';
 import Link from 'next/link';
-import { homedir } from 'os';
 
 type SectionMapping = {
     [key: string]: string;
