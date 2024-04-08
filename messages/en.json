@@ -135,5 +135,24 @@
     "answer5": "Yes, we offer telemedicine appointments for certain conditions and follow-up visits. This option allows you to consult with our pediatric endocrinologist remotely, providing convenience and accessibility while ensuring quality care. Not all conditions may be suitable for telemedicine, so please consult with our team to determine eligibility.",
     "question6": "What languages are spoken at your clinic?",
     "answer6": "At our clinic, we prioritize effective communication. Our staff is proficient in English, Arabic and Urdu. However, we will try to ensure that language is not a barrier to understanding and providing excellent care for our patients and their families."
+  },
+
+  "ContactPage": {
+    "title": "Contact",
+    "address": "Adress",
+    "dubai": "Dubai",
+    "sharjah": "Sharjah",
+    "contact me": "Contact Me",
+    "opening hours": "Opening Hours",
+    "mon-thu": "Mon-Thu",
+    "friday": "Friday",
+    "time1": "8:00am - 3:00pm",
+    "time2": "8:00am - 12:00pm",
+    "follow instruction": "for appointments, call EHS Hotline 800-88-77 or follow link:",
+    "your name": "Your Name",
+    "your email": "Your Email",
+    "your message": "Your Message (optional)",
+    "submit": "Submit",
+    "thank you": "Thank you for your message. It has been sent."
   }
 }

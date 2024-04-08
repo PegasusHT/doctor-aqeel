@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import {useTranslations} from 'next-intl';
 
 const MessageForm = () => {
     const [name, setName] = useState('');
@@ -38,12 +39,13 @@ const MessageForm = () => {
         setIsSubmitted(true);
 
     };
+    const t = useTranslations('ContactPage');
 
     return (
         <form onSubmit={handleSubmit} className="max-w-md mr-5 lg:ml-10 mt-8 text-sm">
             <div className="mb-4">
                 <label htmlFor="name" className="">
-                    Your Name
+                    {t('your name')}
                 </label>
                 <input
                     type="text"
@@ -56,7 +58,7 @@ const MessageForm = () => {
             </div>
             <div className="mb-4">
                 <label htmlFor="email" className=" ">
-                    Your Email
+                    {t('your email')}
                 </label>
                 <input
                     type="email"
@@ -69,7 +71,7 @@ const MessageForm = () => {
             </div>
             <div className="mb-4">
                 <label htmlFor="message" className="">
-                    Your Message (optional)
+                    {t('your message')}
                 </label>
                 <textarea
                     id="message"
@@ -82,12 +84,12 @@ const MessageForm = () => {
                 type="submit"
                 className="px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600"
             >
-                Submit
+                {t('submit')}
             </button>
 
             {isSubmitted && (
                 <div className="mt-6 text-sm mx-2 text-center border rounded-md py-1 border-green-400">
-                    Thank you for your message. It has been sent.
+                    {t('thank you')}
                 </div>
             )}
         </form>

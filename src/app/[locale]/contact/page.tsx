@@ -1,8 +1,10 @@
 import React from 'react';
 import ContactDiv from './components/contactDiv';
+import {useTranslations} from 'next-intl';
 
 const Contact: React.FC = () => {
-    
+    const t = useTranslations('ContactPage');
+
     return (
         <div className='mb-14'>
             <div className="relative flex items-center justify-center h-64 lg:h-[16rem] ">
@@ -13,7 +15,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div className="relative flex items-center justify-center h-64 mb-8">
                     <div className="relative z-10 flex flex-col justify-center items-center text-lg font-bold">
-                        <h2 className='text-6xl lg:text-7xl'>Contact</h2>
+                        <h2 className='text-6xl lg:text-7xl'>{t('title')}</h2>
                     </div>
                 </div>
             </div>
