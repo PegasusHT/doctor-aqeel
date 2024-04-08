@@ -14,7 +14,7 @@ const Services: React.FC = () => {
     const t = useTranslations('ServicesPage');
 
     return (
-        <div className='mb-14' ref={ref}>
+        <div className='mb-14  overflow-clip' ref={ref}>
             <div className='flex flex-col items-center justify-center mt-12 lg:mt-2 ml-1 gap-3 h-30 mb-14'>
                 <motion.h1
                     initial={{ opacity: 0, y: '-15vh' }}
@@ -39,7 +39,7 @@ const Services: React.FC = () => {
                         const nextService = array[index + 1];
                         const isRight = Math.floor(index / 2) % 2 === 0 ? false : true;
                         return (
-                            <div key={index} className='flex flex-col lg:flex-row '>
+                            <div key={index} className='flex flex-col lg:flex-row  '>
                                 <ServiceContainer
                                     key={index}
                                     isRight={isRight}
